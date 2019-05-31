@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://blog.fengfengiot.cn">
-  <title>正则表达式 | 梁峰个人博客</title>
+  <title>CSS笔记 | 梁峰个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="定义 正则表达式是一个用来描述或者匹配一系列符合某个语法的字符串的语言。 很多工具中，包括编辑器，正则表达式用来被检索、替换和拆分某个模式的文本内容。（对于我来说实用的功能是可以用来删除注释） 许多语言都支持正则表达式  正则表达式防君子不防小人，用于表单验证只是放置别人大意输错，并不能保证数据绝对安全。">
+  <meta name="description" content="CSS 是控制网页样式的一种语言。 基础语法css语法：选择器{    属性： 值；    属性： 值  值；}一边写时在冒号后写一个空格，没观。 注释注释和c语言中的“/  /”一样，但是不能用 双斜杠“//”        /我是注释/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="正则表达式">
-<meta property="og:url" content="http://blog.fengfengiot.cn/正则表达式.html">
+<meta property="og:title" content="CSS笔记">
+<meta property="og:url" content="http://blog.fengfengiot.cn/CSS笔记.html">
 <meta property="og:site_name" content="梁峰个人博客">
-<meta property="og:description" content="定义 正则表达式是一个用来描述或者匹配一系列符合某个语法的字符串的语言。 很多工具中，包括编辑器，正则表达式用来被检索、替换和拆分某个模式的文本内容。（对于我来说实用的功能是可以用来删除注释） 许多语言都支持正则表达式  正则表达式防君子不防小人，用于表单验证只是放置别人大意输错，并不能保证数据绝对安全。">
+<meta property="og:description" content="CSS 是控制网页样式的一种语言。 基础语法css语法：选择器{    属性： 值；    属性： 值  值；}一边写时在冒号后写一个空格，没观。 注释注释和c语言中的“/  /”一样，但是不能用 双斜杠“//”        /我是注释/">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-31T03:11:24.852Z">
+<meta property="og:updated_time" content="2019-05-31T03:33:34.713Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="正则表达式">
-<meta name="twitter:description" content="定义 正则表达式是一个用来描述或者匹配一系列符合某个语法的字符串的语言。 很多工具中，包括编辑器，正则表达式用来被检索、替换和拆分某个模式的文本内容。（对于我来说实用的功能是可以用来删除注释） 许多语言都支持正则表达式  正则表达式防君子不防小人，用于表单验证只是放置别人大意输错，并不能保证数据绝对安全。">
+<meta name="twitter:title" content="CSS笔记">
+<meta name="twitter:description" content="CSS 是控制网页样式的一种语言。 基础语法css语法：选择器{    属性： 值；    属性： 值  值；}一边写时在冒号后写一个空格，没观。 注释注释和c语言中的“/  /”一样，但是不能用 双斜杠“//”        /我是注释/">
   
     <link rel="alternative" href="/atom.xml" title="梁峰个人博客" type="application/atom+xml">
   
@@ -154,84 +154,630 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-正则表达式" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-CSS笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      正则表达式
+      CSS笔记
     </h1>
   
 
         
-        <a href="/正则表达式.html" class="archive-article-date">
-  	<time datetime="2018-11-29T12:34:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-29</time>
+        <a href="/CSS笔记.html" class="archive-article-date">
+  	<time datetime="2018-10-23T03:22:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ol>
-<li>正则表达式是一个用来描述或者匹配一系列符合某个语法的字符串的语言。</li>
-<li>很多工具中，包括编辑器，正则表达式用来被检索、替换和拆分某个模式的文本内容。（对于我来说实用的功能是可以用来删除注释）</li>
-<li>许多语言都支持正则表达式 </li>
-<li>正则表达式防君子不防小人，用于表单验证只是放置别人大意输错，并不能保证数据绝对安全。</li>
-</ol>
-<a id="more"></a> 
-<h2 id="创建正则表达式"><a href="#创建正则表达式" class="headerlink" title="创建正则表达式"></a>创建正则表达式</h2><p>正则表达式在js中是以对象来存在的，有两种方法可以闯将正则表达式对象。</p>
-<h3 id="使用对象构造函数创建"><a href="#使用对象构造函数创建" class="headerlink" title="使用对象构造函数创建"></a>使用对象构造函数创建</h3><p>var reg = new RegExp(“du”);</p>
-<h3 id="使用定界符创建"><a href="#使用定界符创建" class="headerlink" title="使用定界符创建"></a>使用定界符创建</h3><p>var reg2 = /com/;//其中 “/“ 为反斜线 </p>
-<h3 id="正则匹配"><a href="#正则匹配" class="headerlink" title="正则匹配"></a>正则匹配</h3><p>使用正则表达式对象的test方法来进行匹配，test方法参数为要匹配的值。</p>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"> <span class="comment">//1. 通过构造函数创建正则表达式</span></span><br><span class="line"> <span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"du"</span>);</span><br><span class="line"></span><br><span class="line"> <span class="comment">//2. 通过字面量的方式创建正则表达式</span></span><br><span class="line"> <span class="keyword">var</span> reg2 = <span class="regexp">/com/</span>;<span class="comment">//其中 "/" 为反斜线 </span></span><br><span class="line"></span><br><span class="line"> <span class="comment">//3. 通过正则规则匹配具体数据</span></span><br><span class="line"> <span class="keyword">var</span> str = <span class="string">"www.baidu.com"</span>;</span><br><span class="line"> <span class="keyword">var</span> res = reg.test(str);</span><br><span class="line"> <span class="keyword">var</span> res2 = reg2.test(str);</span><br><span class="line"> <span class="built_in">document</span>.write(res+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res2);</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="原子"><a href="#原子" class="headerlink" title="原子"></a>原子</h2><p>正则表达式是一种模糊匹配的方式，只要被匹配的字符串有有部分满足条件则匹配成功。使用模糊匹配就用到原子。常用原子如下，小写和大写功能相反。</p>
-<ol>
-<li>d 匹配数字</li>
-<li>D 匹配非数字</li>
-<li>w 匹配字母、数字、下划线</li>
-<li>W 匹配非数字、非字母、非下划线。</li>
-<li>s 匹配空白字符：空格、tab、换行</li>
-<li>S 匹配非空白字符。<h3 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//特点：只要被匹配内容中有任何一部分是符合正则要求的，那么就是可以匹配成功的。</span></span><br><span class="line"> <span class="comment">// 1.d 匹配一个数字</span></span><br><span class="line"> <span class="keyword">var</span> reg = <span class="regexp">/\d/</span>; <span class="comment">//代表一个数字</span></span><br><span class="line"> <span class="keyword">var</span> reg2 = <span class="regexp">/m\d/</span> <span class="comment">//代表m字母后跟一个数字</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">//2. D 匹配一个非数字，与小写功能相反</span></span><br><span class="line"> <span class="keyword">var</span> reg3 = <span class="regexp">/\D/</span>;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//3. w 任意数字 字母或者下划线</span></span><br><span class="line"> <span class="keyword">var</span> reg4 = <span class="regexp">/\w/</span>;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//4. W 任意非数字非字母或者非下划线，与小写w相反</span></span><br><span class="line"> <span class="keyword">var</span> reg5 = <span class="regexp">/\W/</span>;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//5. s 任意空白字符：空格 tab 换行</span></span><br><span class="line"> <span class="keyword">var</span> reg6 = <span class="regexp">/\s/</span>;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//6. S 任意非空白字符</span></span><br><span class="line"> <span class="keyword">var</span> reg7 = <span class="regexp">/\S/</span>;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//7. 原子组合使用</span></span><br><span class="line"> <span class="keyword">var</span> reg8 = <span class="regexp">/\d\d\d\w\s/</span>;<span class="comment">//匹配四个数字一个字符一个空白字符</span></span><br><span class="line"> <span class="keyword">var</span> str2 = <span class="string">"1234a "</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> <span class="keyword">var</span> str = <span class="string">"www.baidu.com2018"</span>;</span><br><span class="line"> <span class="keyword">var</span> res = reg.test(str);</span><br><span class="line"> <span class="keyword">var</span> res2 = reg2.test(str);</span><br><span class="line"> <span class="keyword">var</span> res3 = reg3.test(str);</span><br><span class="line"> <span class="keyword">var</span> res4 = reg4.test(str);</span><br><span class="line"> <span class="keyword">var</span> res5 = reg5.test(str);</span><br><span class="line"> <span class="keyword">var</span> res6 = reg6.test(str);</span><br><span class="line"> <span class="keyword">var</span> res7 = reg7.test(str);</span><br><span class="line"> <span class="keyword">var</span> res8 = reg8.test(str2);</span><br><span class="line"></span><br><span class="line"> <span class="built_in">document</span>.write(res + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res2+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res3+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res4+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res5+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res6+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res7+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res8+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+        <p>CSS 是控制网页样式的一种语言。</p>
+<h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><p>css语法：<br>选择器{<br>    属性： 值；<br>    属性： 值  值；<br>}<br>一边写时在冒号后写一个空格，没观。</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>注释和c语言中的“/<em>  </em>/”一样，但是不能用 双斜杠“//”<br>        /<em>我是注释</em>/</p>
+<a id="more"></a>
+<h1 id="css的引入方式"><a href="#css的引入方式" class="headerlink" title="css的引入方式"></a>css的引入方式</h1><h3 id="外部链接引入"><a href="#外部链接引入" class="headerlink" title="外部链接引入"></a>外部链接引入</h3><p>利用link标签实现，在head标签中写入link标签引入外部css文件，最常用，如下</p>
+<pre><code>&lt;link &lt;span class=&quot;hljs-variable&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;hljs-variable&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css&quot;&lt;/span&gt;&gt;
+&lt;link &lt;span class=&quot;hljs-variable&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;hljs-variable&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;css/style.css&quot;&lt;/span&gt;&gt;
+`&lt;/pre&gt;
+
+rel：链接文件类型
+href：链接路径，可以是网络上的文件，也可以是本地的文件。其中“./”表示当前目录，“../”表示上一级目录。
+
+### import外部引入###、
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-at_rule&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(task.css)&lt;/span&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+必须写在文档的开始，用的少，
+
+### 内联样式
+
+在head中编写style标签写内部样式，这种方式css样式只在本页面有效。
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;head&lt;/span&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;hljs-attribute&quot;&gt;charset&lt;/span&gt;=&lt;span class=&quot;hljs-value&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;title&lt;/span&gt;&gt;&lt;/span&gt;Document&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;title&lt;/span&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;style&lt;/span&gt;&gt;&lt;/span&gt;&lt;span class=&quot;css&quot;&gt;
+&lt;span class=&quot;hljs-comment&quot;&gt;/*这种为css的注释，只有在style标签内有效*/&lt;/span&gt;
+&lt;span class=&quot;hljs-tag&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{
+  &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;font-weight&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; bold&lt;/span&gt;&lt;/span&gt;;&lt;span class=&quot;hljs-comment&quot;&gt;/*加粗*/&lt;/span&gt;
+  &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;font-style&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; italic&lt;/span&gt;&lt;/span&gt;;
+  &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;color&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; green&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;style&lt;/span&gt;&gt;&lt;/span&gt;    
+&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;head&lt;/span&gt;&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+### 行内样式
+
+在行内定义样式，这种方式优先级最高，即使在外部文件中定义样式，行内样式也会覆盖。但是这种方式极不灵活。
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;hljs-attribute&quot;&gt;style&lt;/span&gt;=&lt;span class=&quot;hljs-value&quot;&gt;&quot;color:red &quot;&lt;/span&gt;&gt;&lt;/span&gt;&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;p&lt;/span&gt;&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+如果要是一个样式优先级最高，可以在css属性后加“！important”
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;hljs-attribute&quot;&gt;style&lt;/span&gt;=&lt;span class=&quot;hljs-value&quot;&gt;&quot;color:red !important&quot;&lt;/span&gt;&gt;&lt;/span&gt;&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;p&lt;/span&gt;&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+# 选择器
+
+### 元素选择器
+
+针对不同元素设置样式
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-tag&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;color&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt;red&lt;/span&gt;&lt;/span&gt;;
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;font-size&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-number&quot;&gt;50px&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-comment&quot;&gt;/*并集选择器，利用逗号分隔，属性对两个选择器都起作用*/&lt;/span&gt;
+&lt;span class=&quot;hljs-tag&quot;&gt;h1&lt;/span&gt;,&lt;span class=&quot;hljs-tag&quot;&gt;h2&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;color&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt;red&lt;/span&gt;&lt;/span&gt;;
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;font-size&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-number&quot;&gt;50px&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+### 类选择器 class
+
+针对不对类别设置样式，html中利用&quot;class=&quot;类名&quot;给元素设置类，在CSS文件中利用“.类名”来实现类的选择。如下：
+
+HTML：
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;h3&lt;/span&gt; &lt;span class=&quot;hljs-attribute&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-value&quot;&gt;&quot;one&quot;&lt;/span&gt;&gt;&lt;/span&gt;类选择器&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;h3&lt;/span&gt;&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+CSS:
+
+&lt;pre&gt;`  &lt;span class=&quot;hljs-comment&quot;&gt;/*类选择器*/&lt;/span&gt;
+  &lt;span class=&quot;hljs-class&quot;&gt;.one&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{
+      &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-number&quot;&gt;150px&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;;
+      &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;height&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-number&quot;&gt;50px&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;;
+      &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;border&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-number&quot;&gt;3px&lt;/span&gt; dotted blue&lt;/span&gt;&lt;/span&gt;;
+  &lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+类选择器可以被多种标签使用，同一个标签可以使用多个类选择器，用空格隔开，如下
+
+HTML:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;h4&lt;/span&gt; &lt;span class=&quot;hljs-attribute&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-value&quot;&gt;&quot;one two&quot;&lt;/span&gt;&gt;&lt;/span&gt;类选择器&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;h4&lt;/span&gt;&gt;&lt;/span&gt; 
+`&lt;/pre&gt;
+
+CSS:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-comment&quot;&gt;/*类选择器*/&lt;/span&gt;
+&lt;span class=&quot;hljs-class&quot;&gt;.one&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;font-size&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-number&quot;&gt;20px&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;;
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;color&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; blue&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-class&quot;&gt;.two&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;border&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-number&quot;&gt;2px&lt;/span&gt; solid black&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+两个类选择器也可以作为交集使用，“.类名1.类名2”（不能有空格）指的是当一个元素具有这两个类名的时候被改选择器选中如下：
+
+HTML:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;h4&lt;/span&gt; &lt;span class=&quot;hljs-attribute&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-value&quot;&gt;&quot;one two&quot;&lt;/span&gt;&gt;&lt;/span&gt;类选择器&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;h4&lt;/span&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;h3&lt;/span&gt; &lt;span class=&quot;hljs-attribute&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-value&quot;&gt;&quot;one&quot;&lt;/span&gt;&gt;&lt;/span&gt;类选择器&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;h3&lt;/span&gt;&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+CSS:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-comment&quot;&gt;/*当元素当时具有类onetwo时才有效*/&lt;/span&gt;
+&lt;span class=&quot;hljs-class&quot;&gt;.one&lt;/span&gt;&lt;span class=&quot;hljs-class&quot;&gt;.two&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;font-size&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-number&quot;&gt;20px&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;;
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;color&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; blue&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+### ID选择器
+
+作用与类选择器相似,html中利用&quot;id=&quot;类名&quot;给元素设置类，在CSS文件中利用“#ID”来实现类的选择。如下：
+
+HTML:
+
+&lt;pre&gt;`&lt;h2 &lt;span class=&quot;hljs-property&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;mytitle&quot;&lt;/span&gt;&gt;&lt;span class=&quot;hljs-property&quot;&gt;id&lt;/span&gt;选择器&lt;/h2&gt;
+`&lt;/pre&gt;
+
+CSS:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-id&quot;&gt;#mytitle&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{
+  &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;border&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-number&quot;&gt;3px&lt;/span&gt; dashed red&lt;/span&gt;&lt;/span&gt;;
+  &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;font-size&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-number&quot;&gt;40px&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+### 三种选择器的区别
+
+1.标签选择器针对的是页面上的一类标签，
+
+2.ID选择器只针对特定的一个标签，ID是此标签在此页面上的唯一标志。
+
+3.类选择器可以被多种标签使用
+
+### 注意
+
+类上样式，ID上行为，一般类给CSS使用，ID给JS使用
+
+### 属性选择器
+
+#### 属性名选择器
+
+属性选择器通过选择标签内的属性来选择对应的元素，在HTML中通过属性“type=“text”,在CSS文件中通过“[ ]”来选中元素进行格式化操作
+如下：
+
+HTML:
+
+&lt;pre&gt;`&lt;&lt;span class=&quot;hljs-tag&quot;&gt;button&lt;/span&gt; title=&lt;span class=&quot;hljs-string&quot;&gt;&quot;点击此处登陆&quot;&lt;/span&gt;&gt;登陆&lt;/button&gt;
+&lt;&lt;span class=&quot;hljs-tag&quot;&gt;button&lt;/span&gt; title=&lt;span class=&quot;hljs-string&quot;&gt;&quot;注册&quot;&lt;/span&gt;&gt;注册&lt;/button&gt;
+&lt;&lt;span class=&quot;hljs-tag&quot;&gt;input&lt;/span&gt; title=&lt;span class=&quot;hljs-string&quot;&gt;&quot;密码&quot;&lt;/span&gt; type=&lt;span class=&quot;hljs-string&quot;&gt;&quot;text&quot;&lt;/span&gt;&gt;
+`&lt;/pre&gt;
+
+CSS:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-attr_selector&quot;&gt;[title]&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;border&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-number&quot;&gt;1px&lt;/span&gt; solid red&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+#### 属性值选择器
+
+ 具有title属性的标签都会被选择器选中，同时，还可以进一步的细化选择，将title属性的值设定来选择标签，如下
+
+HTML:
+
+&lt;pre&gt;`&lt;&lt;span class=&quot;hljs-tag&quot;&gt;input&lt;/span&gt; title=&lt;span class=&quot;hljs-string&quot;&gt;&quot;密码&quot;&lt;/span&gt; type=&lt;span class=&quot;hljs-string&quot;&gt;&quot;text&quot;&lt;/span&gt;&gt;
+&lt;&lt;span class=&quot;hljs-tag&quot;&gt;button&lt;/span&gt; title=&lt;span class=&quot;hljs-string&quot;&gt;&quot;赞我&quot;&lt;/span&gt;&gt;赞&lt;/button&gt;
+`&lt;/pre&gt;
+
+CSS:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-comment&quot;&gt;/*只有属性值完全匹配的元素才会执行样式*/&lt;/span&gt;
+&lt;span class=&quot;hljs-attr_selector&quot;&gt;[title=&quot;密码&quot;]&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;border&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-number&quot;&gt;1px&lt;/span&gt; solid red&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+#### 属性值部分匹配选择器
+
+属性值还可匹配部分，头部或尾部来选择元素，可能有人会疑惑这种方法的用途，我们可以举个例子，当我们的网站中有跳转到外部的链接和本站的链接时，我们不知道外部网站的安全性，但是我们知道自己网站的安全性，需要通过一种手段来警示永华的话，可以利用属性选择器的头部匹配来实现。如下：
+
+HTML:
+
+&lt;pre&gt;`  &lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;hljs-attribute&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;hljs-value&quot;&gt;&quot;https://www.baidu.com/home/news/data/newspage?nid=15672657710991049227&amp;n_type=0&amp;p_from=1&quot;&lt;/span&gt;&gt;&lt;/span&gt;百度新闻&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;a&lt;/span&gt;&gt;&lt;/span&gt;
+  &lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;hljs-attribute&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;hljs-value&quot;&gt;&quot;https://www.baidu.com/home/news/data/newspage?nid=6688829174503703257&amp;n_type=0&amp;p_from=1&quot;&lt;/span&gt;&gt;&lt;/span&gt;百度科技&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;a&lt;/span&gt;&gt;&lt;/span&gt;
+  &lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;hljs-attribute&quot;&gt;href&lt;/span&gt;=&lt;span class=&quot;hljs-value&quot;&gt;&quot;www.aaabbb.com/abc/123&quot;&lt;/span&gt;&gt;&lt;/span&gt;未知网站&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;a&lt;/span&gt;&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+CSS:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-attr_selector&quot;&gt;[href]&lt;/span&gt;
+&lt;span class=&quot;hljs-rules&quot;&gt;{
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;border&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-number&quot;&gt;1px&lt;/span&gt; dashed red&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-attr_selector&quot;&gt;[href*=&quot;www.baidu.com&quot;]&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;border&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-number&quot;&gt;1px&lt;/span&gt; solid green&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-comment&quot;&gt;/*百度属于安全网站，不管跳转到哪个板块，只要有www。bidu.com这几个字符就可以选中，外边框为绿色，未知网站未知是否安全，外边框为红色，*/&lt;/span&gt;
+`&lt;/pre&gt;
+
+#### 属性值头部匹配选择器
+
+选中头部,利用托字符实现：[title^=&quot;点击&quot;]，选中以点击开始的元素
+
+HTML:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-tag&quot;&gt;&lt;&lt;span class=&quot;hljs-title&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;hljs-attribute&quot;&gt;title&lt;/span&gt;=&lt;span class=&quot;hljs-value&quot;&gt;&quot;点击此处登陆&quot;&lt;/span&gt;&gt;&lt;/span&gt;登陆&lt;span class=&quot;hljs-tag&quot;&gt;&lt;/&lt;span class=&quot;hljs-title&quot;&gt;button&lt;/span&gt;&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+CSS:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-attr_selector&quot;&gt;[title^=&quot;点击&quot;]&lt;/span&gt;&lt;span class=&quot;hljs-comment&quot;&gt;/*只要标签属性title的值头部为点击即可选中*/&lt;/span&gt;
+&lt;span class=&quot;hljs-rules&quot;&gt;{
+      &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;color&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt;red&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+#### 属性值尾部匹配选择器
+
+选中尾部,利用美元符号字符“$”实现：[title$=&quot;点击&quot;]，选中以点击为尾部的元素
+
+### 后代选择器
+
+后代选择器选中元素的下一级，下下级，下下下级。。。。。只要是他的下级就能选中 格式：”元素 空格 元素“
+
+#### rgba（）
+
+rgba是设置透明色，格式：rgba（red,green,blue,alpha）其中alpha指的是不透明度，取值范围为（0-1），red，green，blue取值范围（0-255).
+
+HTML:
+
+&lt;pre&gt;`&lt;&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;hljs-type&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;father&quot;&lt;/span&gt;&gt;father
+    &lt;&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;hljs-type&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;son&quot;&lt;/span&gt;&gt;son
+        &lt;&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;hljs-type&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;grandson&quot;&lt;/span&gt;&gt;grandson
+
+        &lt;/&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt;&gt;
+        &lt;&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;hljs-type&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;grandson&quot;&lt;/span&gt;&gt;grandson2
+        &lt;/&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt;&gt;
+    &lt;/&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt;&gt;
+    &lt;&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;hljs-type&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;son&quot;&lt;/span&gt;&gt;son2&lt;/&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt;&gt;
+&lt;/&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt;&gt;
+`&lt;/pre&gt;
+
+CSS:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-class&quot;&gt;.father&lt;/span&gt; *&lt;span class=&quot;hljs-rules&quot;&gt;{&lt;span class=&quot;hljs-comment&quot;&gt;/*选中father的所有子元素*/&lt;/span&gt;
+  &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;padding&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-number&quot;&gt;10px&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;;
+  &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;background&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-function&quot;&gt;rgba&lt;/span&gt;(&lt;span class=&quot;hljs-number&quot;&gt;255&lt;/span&gt;,&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;,.&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-class&quot;&gt;.father&lt;/span&gt; &lt;span class=&quot;hljs-class&quot;&gt;.son&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{&lt;span class=&quot;hljs-comment&quot;&gt;/*选中father的子元素*/&lt;/span&gt;
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;border&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-number&quot;&gt;1px&lt;/span&gt; dashed black&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-class&quot;&gt;.father&lt;/span&gt; &lt;span class=&quot;hljs-class&quot;&gt;.grandson&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{&lt;span class=&quot;hljs-comment&quot;&gt;/*选中father的孙子子元素*/&lt;/span&gt;
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;border&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-number&quot;&gt;1px&lt;/span&gt; solid green&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-class&quot;&gt;.father&lt;/span&gt; &lt;span class=&quot;hljs-class&quot;&gt;.son&lt;/span&gt; &lt;span class=&quot;hljs-class&quot;&gt;.grandson&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{&lt;span class=&quot;hljs-comment&quot;&gt;/*选中father的孙子元素*/&lt;/span&gt;
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;border&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-number&quot;&gt;1px&lt;/span&gt; dashed black&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-class&quot;&gt;.son&lt;/span&gt; &lt;span class=&quot;hljs-class&quot;&gt;.grandson&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{&lt;span class=&quot;hljs-comment&quot;&gt;/*选中son的子元素*/&lt;/span&gt;
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;border&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-number&quot;&gt;1px&lt;/span&gt; dashed black&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+### 相邻选择器
+
+选中同一级兄弟元素，
+
+#### 相邻选择器“+”
+
+格式“元素1+元素2”，选中元素1的下一个元素2，也就是选他的弟弟，位于他下边的弟弟元素2；
+如下：
+
+HTML:
+
+&lt;pre&gt;`&lt;&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;hljs-type&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;a&quot;&lt;/span&gt;&gt;a&lt;/&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt;&gt;
+&lt;&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;hljs-type&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;b&quot;&lt;/span&gt;&gt;b&lt;/&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt;&gt;
+&lt;&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;hljs-type&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;c&quot;&lt;/span&gt;&gt;c&lt;/&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt;&gt;
+`&lt;/pre&gt;
+
+CSS:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-class&quot;&gt;.a&lt;/span&gt; + &lt;span class=&quot;hljs-class&quot;&gt;.b&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;background&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-function&quot;&gt;rgba&lt;/span&gt;(&lt;span class=&quot;hljs-number&quot;&gt;255&lt;/span&gt;,&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;,.&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+#### 通用相邻选择器&quot;~&quot;
+
+格式“元素1~元素2”选中元素1的**所有**弟弟元素元素2
+
+HTML:
+
+&lt;pre&gt;`&lt;&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;hljs-type&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;a&quot;&lt;/span&gt;&gt;a&lt;/&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt;&gt;
+&lt;&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;hljs-type&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;b&quot;&lt;/span&gt;&gt;b&lt;/&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt;&gt;
+&lt;&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;hljs-type&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;b&quot;&lt;/span&gt;&gt;b2&lt;/&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt;&gt;
+&lt;&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;hljs-type&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;hljs-string&quot;&gt;&quot;c&quot;&lt;/span&gt;&gt;c&lt;/&lt;span class=&quot;hljs-keyword&quot;&gt;div&lt;/span&gt;&gt;
+`&lt;/pre&gt;
+
+CSS:
+
+&lt;pre&gt;`&lt;span class=&quot;hljs-class&quot;&gt;.a&lt;/span&gt; ~ &lt;span class=&quot;hljs-class&quot;&gt;.b&lt;/span&gt;&lt;span class=&quot;hljs-rules&quot;&gt;{&lt;span class=&quot;hljs-comment&quot;&gt;/*选中类a的所有弟弟类b元素b和b2*/&lt;/span&gt;
+    &lt;span class=&quot;hljs-rule&quot;&gt;&lt;span class=&quot;hljs-attribute&quot;&gt;background&lt;/span&gt;:&lt;span class=&quot;hljs-value&quot;&gt; &lt;span class=&quot;hljs-function&quot;&gt;rgba&lt;/span&gt;(&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;hljs-number&quot;&gt;255&lt;/span&gt;,&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;,.&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;;
+&lt;span class=&quot;hljs-rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+`&lt;/pre&gt;
+
+### 伪类选择器
+
+伪类选择器功能与类相似，但是不是类，指的时选择器可以在不同元素的不同状态生效，如鼠标点击之后，鼠标放上之后等。
+css允许对元素的不同状态，定义不同的样式信息，伪类有分为：静态伪类（只能用于超链接）和动态伪类（针对所有标签都适用）
+
+静态伪类
+</code></pre><ol>
+<li>link:超链接点击之前</li>
+<li><p>visited:超链接点击之后</p>
+<p>动态伪类</p>
+</li>
+<li><p>focus:某个标签获得焦点，如某个输入框获得焦点</p>
+</li>
+<li>hover:鼠标放在某个标签上</li>
+<li><p>active:点击某个标签没有松开鼠标时</p>
+<p>如下：</p>
+<p>HTML:</p>
+<pre>`<span class="hljs-tag"><<span class="hljs-title">b</span>></span>静态伪类<span class="hljs-tag">b</span>>
+<span class="hljs-tag"><<span class="hljs-title">p</span>></span>鼠标点击前时红色，点击后时绿色<span class="hljs-tag">p</span>>
+<span class="hljs-tag"><<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"learn.html"</span>></span>鼠标放在我上边啊<span class="hljs-tag">a</span>>
+<span class="hljs-tag"><<span class="hljs-title">p</span>></span><span class="hljs-tag"><<span class="hljs-title">b</span>></span>注意：<span class="hljs-tag">b</span>>a{}定义的样式针对所有的超链接，包括锚点；a:link定义的样式针对所有写了href属性的超链接（不包括锚点）<span class="hljs-tag">p</span>> <span class="hljs-tag"><<span class="hljs-title">br</span>></span>
+<span class="hljs-tag"><<span class="hljs-title">b</span>></span>动态伪类<span class="hljs-tag">b</span>> <span class="hljs-tag"><<span class="hljs-title">br</span>></span>
+点击编辑框获取焦点，观察样式改变 <span class="hljs-tag"><<span class="hljs-title">br</span>></span>
+<span class="hljs-tag"><<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span>></span> <span class="hljs-tag"><<span class="hljs-title">br</span>></span> <span class="hljs-tag"><<span class="hljs-title">br</span>></span>
+<span class="hljs-tag"><<span class="hljs-title">label</span>></span>我是label，鼠标放上来<span class="hljs-tag">label</span>> <span class="hljs-tag"><<span class="hljs-title">br</span>></span>
+<span class="hljs-tag"><<span class="hljs-title">hr</span>></span>
+`</pre>
+
+<p>CSS:</p>
+<pre>`<span class="hljs-comment">/*伪类选择器 动态伪类*/</span>
+<span class="hljs-tag">input</span><span class="hljs-pseudo">:focus</span><span class="hljs-rules">{ <span class="hljs-comment">/*鼠标点击编辑后 样式改变*/</span>
+    <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">3px</span> solid <span class="hljs-hexcolor">#FF6F3D</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> white</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#6a6a6a</span></span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-tag">label</span><span class="hljs-pseudo">:active</span><span class="hljs-rules">{<span class="hljs-comment">/*点击鼠标未松开未红色 为什么不管用？？？？*/</span>
+    <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-tag">label</span><span class="hljs-pseudo">:hover</span><span class="hljs-rules">{<span class="hljs-comment">/*鼠标放在标签上是蓝色*/</span>
+    <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">blue</span></span>;
+
+<span class="hljs-rule">}</span></span>
+`</pre>
+
+<p>神奇表格</p>
+<p>HTML:</p>
+<pre>`<span class="hljs-tag"><<span class="hljs-title">b</span>></span>神奇表格<span class="hljs-tag">b</span>> <span class="hljs-tag"><<span class="hljs-title">br</span>></span>
+把鼠标放上来试试<span class="hljs-tag"><<span class="hljs-title">br</span>></span>
+<span class="hljs-tag"><<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sqbg"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-title">tr</span>></span>
+        <span class="hljs-tag"><<span class="hljs-title">td</span>></span><span class="hljs-tag">td</span>>
+        <span class="hljs-tag"><<span class="hljs-title">td</span>></span><span class="hljs-tag">td</span>>
+        <span class="hljs-tag"><<span class="hljs-title">td</span>></span><span class="hljs-tag">td</span>>
+        <span class="hljs-tag"><<span class="hljs-title">td</span>></span><span class="hljs-tag">td</span>>
+    <span class="hljs-tag">tr</span>>
+    <span class="hljs-tag"><<span class="hljs-title">tr</span>></span>
+        <span class="hljs-tag"><<span class="hljs-title">td</span>></span><span class="hljs-tag">td</span>>
+        <span class="hljs-tag"><<span class="hljs-title">td</span>></span><span class="hljs-tag">td</span>>
+        <span class="hljs-tag"><<span class="hljs-title">td</span>></span><span class="hljs-tag">td</span>>
+        <span class="hljs-tag"><<span class="hljs-title">td</span>></span><span class="hljs-tag">td</span>>
+    <span class="hljs-tag">tr</span>>
+    <span class="hljs-tag"><<span class="hljs-title">tr</span>></span>
+        <span class="hljs-tag"><<span class="hljs-title">td</span>></span><span class="hljs-tag">td</span>>
+        <span class="hljs-tag"><<span class="hljs-title">td</span>></span><span class="hljs-tag">td</span>>
+        <span class="hljs-tag"><<span class="hljs-title">td</span>></span><span class="hljs-tag">td</span>>
+        <span class="hljs-tag"><<span class="hljs-title">td</span>></span><span class="hljs-tag">td</span>>
+    <span class="hljs-tag">tr</span>>
+<span class="hljs-tag">table</span>>
+`</pre>
+
+<p>CSS:</p>
+<pre>`<span class="hljs-tag">table</span><span class="hljs-rules">{
+<span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"><span class="hljs-number">300px</span></span></span>;
+<span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">200px</span></span></span>;
+<span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">1px</span> solid red</span></span>;
+<span class="hljs-rule"><span class="hljs-attribute">border-collapse</span>:<span class="hljs-value"> collapse</span></span>;<span class="hljs-comment">/*折叠表格线*/</span>
+
+<span class="hljs-rule">}</span></span>
+<span class="hljs-comment">/*后代、伪类选择器*/</span>
+<span class="hljs-tag">table</span> <span class="hljs-tag">td</span><span class="hljs-pseudo">:hover</span><span class="hljs-rules">{<span class="hljs-comment">/*鼠标悬停时，让当前行显示#868686颜色*/</span>
+    <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#868686</span></span></span>;
+
+<span class="hljs-rule">}</span></span>
+<span class="hljs-tag">table</span> <span class="hljs-tag">td</span><span class="hljs-rules">{
+
+    <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">1px</span> solid blue</span></span>;
+<span class="hljs-rule">}</span></span>
+`</pre>
+
+<h3 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h3><p>类似于伪类，针对不同元素的不同位置进行选择，包括首字母，父亲第一个元素，最后一个元素等</p>
+<p>选择这段文字的第一个字母，进行大写操作<br>HTML:</p>
+<pre>`<div class="maxfirst">
+    <p>Lo<span class="hljs-comment">rem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam nesciunt nam, esse a reiciendis eius eligendi quae nihil ad porro amet voluptatem sequi voluptate tenetur veritatis explicabo consequuntur tempora id?</span>
+    </p>
+</div>
+`</pre>
+
+<p>CSS:</p>
+<pre>`<span class="hljs-comment">/*选择这段文字的第一个字母，进行大写操作*/</span>
+<span class="hljs-class">.maxfirst</span> <span class="hljs-tag">p</span><span class="hljs-pseudo">:first-letter</span> <span class="hljs-comment">/*后代-伪元素选择器*/</span>
+<span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">50px</span></span></span>;
+<span class="hljs-rule">}</span></span>
+`</pre>
+
+<p>在所选元素的前边和后边各插入内容，以后只要是这个类就可以拥有设置后缀和前缀,下边是一个帮助列表，有一定的格式，点进去后都是一个文档</p>
+<p>HTML:</p>
+<pre>`<span class="hljs-tag"><<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"helpa"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>></span>什么是支付宝？<span class="hljs-tag">a</span>>
+<span class="hljs-tag"><<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"helpa"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>></span>什么是支付密码？<span class="hljs-tag">a</span>>
+<span class="hljs-tag"><<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"helpa"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>></span>什么是登录密码？<span class="hljs-tag">a</span>>
+`</pre>
+
+<p>CSS:</p>
+<pre>`<span class="hljs-class">.helpa</span><span class="hljs-pseudo">:after</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">content</span>:<span class="hljs-value"> <span class="hljs-string">"[?]"</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-class">.helpa</span><span class="hljs-pseudo">:before</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">content</span>:<span class="hljs-value"> <span class="hljs-string">"[--]"</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
+<span class="hljs-rule">}</span></span>
+`</pre>
+
+<p>选中div中中的第一个儿子p，最后一个儿子p和第三个儿子p</p>
+<p>HTML:</p>
+<pre><code>&lt;div class=&quot;wys&quot;&gt;
+    &lt;p&gt;1&lt;/p&gt;
+    &lt;p&gt;2&lt;/p&gt;
+    &lt;p&gt;3&lt;/p&gt;
+    &lt;p&gt;4&lt;/p&gt;
+    &lt;p&gt;5&lt;/p&gt;
+&lt;/div&gt;
+</code></pre><p>CSS:</p>
+<pre>`<span class="hljs-class">.wys</span> <span class="hljs-tag">p</span><span class="hljs-pseudo">:last-child</span><span class="hljs-rules">{
+<span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> green</span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-class">.wys</span> <span class="hljs-tag">p</span><span class="hljs-pseudo">:first-child</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
+<span class="hljs-rule">}</span></span>
+<span class="hljs-class">.wys</span> <span class="hljs-tag">p</span><span class="hljs-pseudo">:nth-child(3)</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> purple</span></span>;
+<span class="hljs-rule">}</span></span>
+`</pre>
+
+<h3 id="选择器权重"><a href="#选择器权重" class="headerlink" title="选择器权重"></a>选择器权重</h3><p>层叠性：处理css冲突的能力</p>
+<p>三种选择器同时给文字增加颜色属性，但是文字最终显示为蓝色，因为出现了层叠性的情况当多个选择器，选择上了某个元素的时候，</p>
+<p>优先级如下，根据各个选择器的数量来确定权重</p>
+<p>style属性（内联）&gt; ID选择器 &gt; 类选择器、属性选择器、伪类选择器    &gt; 元素选择器</p>
+<p>HTML,CSS:</p>
+<pre>`<span class="hljs-doctype"><!DOCTYPE html></span>
+<span class="hljs-tag"><<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>></span>
+<span class="hljs-tag"><<span class="hljs-title">head</span>></span>
+    <span class="hljs-tag"><<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-title">title</span>></span>层叠性2<span class="hljs-tag">title</span>>
+    <span class="hljs-tag"><<span class="hljs-title">style</span>></span><span class="css">
+        <span class="hljs-id">#box1</span> <span class="hljs-class">.hezi2</span> <span class="hljs-tag">p</span><span class="hljs-rules">{ <span class="hljs-comment">/*ID选择器1 类选择器1 标签选择器1*/</span>
+                        <span class="hljs-comment">/*1,1,1*/</span>
+            <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
+        <span class="hljs-rule">}</span></span>
+
+        <span class="hljs-tag">div</span> <span class="hljs-tag">div</span> <span class="hljs-id">#box3</span> <span class="hljs-tag">p</span><span class="hljs-rules">{<span class="hljs-comment">/*1,0,3*/</span>
+            <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> green</span></span>;
+        <span class="hljs-rule">}</span></span>
+
+        <span class="hljs-tag">div</span><span class="hljs-class">.hezi1</span> <span class="hljs-tag">div</span><span class="hljs-class">.hezi2</span> <span class="hljs-tag">div</span><span class="hljs-class">.hezi3</span> <span class="hljs-tag">p</span><span class="hljs-rules">{<span class="hljs-comment">/*0,3,4*/</span>
+            <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> blue</span></span>;
+        <span class="hljs-rule">}</span></span>
+    </span><span class="hljs-tag">style</span>>
+<span class="hljs-tag">head</span>>
+<span class="hljs-tag"><<span class="hljs-title">body</span>></span>
+    <span class="hljs-tag"><<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hezi1"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"box1"</span>></span>
+        <span class="hljs-tag"><<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hezi2"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"box2"</span>></span>
+            <span class="hljs-tag"><<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hezi3"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"box3"</span>></span>
+                <span class="hljs-tag"><<span class="hljs-title">p</span>></span>猜猜我是什么颜色？红色<span class="hljs-tag">p</span>>
+                <span class="hljs-tag"><<span class="hljs-title">br</span>></span>
+                统计各个选择器的数量，优先级高的胜出
+                <span class="hljs-tag"><<span class="hljs-title">br</span>></span>
+                优先级顺序：id选择器>类选择器>标签选择器
+                <span class="hljs-tag"><<span class="hljs-title">br</span>></span>
+                在此例中第一个选择器的id和类选择器都是一个，而剩下的两个都是有其中一个为0个，因此胜出
+            <span class="hljs-tag">div</span>>
+        <span class="hljs-tag">div</span>>
+
+    <span class="hljs-tag">div</span>>
+<span class="hljs-tag">body</span>>
+<span class="hljs-tag">html</span>>
+`</pre>
+
+<p>当权重相同时，位置靠后的起效</p>
+<p>HTML:</p>
+<pre>`<span class="hljs-doctype"><!DOCTYPE html></span>
+<span class="hljs-tag"><<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>></span>
+<span class="hljs-tag"><<span class="hljs-title">head</span>></span>
+    <span class="hljs-tag"><<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-title">title</span>></span>层叠性3：当权重相同时<span class="hljs-tag">title</span>>
+    <span class="hljs-tag"><<span class="hljs-title">style</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span>></span><span class="css">
+        <span class="hljs-id">#box1</span> <span class="hljs-class">.hezi2</span> <span class="hljs-tag">p</span><span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;<span class="hljs-comment">/*id选择器，类选择器，标签选择器 1.1.1*/</span>
+        <span class="hljs-rule">}</span></span>
+        <span class="hljs-id">#box2</span> <span class="hljs-tag">div</span> <span class="hljs-class">.pp</span><span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> blue</span></span>;<span class="hljs-comment">/*1.1.1*/</span>
+        <span class="hljs-rule">}</span></span>
+        <span class="hljs-comment">/*第一个样式和第二个样式权重相同，但第二个样式书写顺序靠后，以第二个为准*/</span>
+    </span><span class="hljs-tag">style</span>>
+<span class="hljs-tag">head</span>>
+<span class="hljs-tag"><<span class="hljs-title">body</span>></span>
+    <span class="hljs-tag"><<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hezi1"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"box1"</span>></span>
+        <span class="hljs-tag"><<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hezi2"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"box2"</span>></span>
+            <span class="hljs-tag"><<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hezi3"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"box3"</span>></span>
+                <span class="hljs-tag"><<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"pp"</span>></span>猜猜我是什么颜色？蓝色<span class="hljs-tag">p</span>>
+                第一个样式和第二个样式权重相同，但第二个样式书写顺序靠后，以第二个为准
+            <span class="hljs-tag">div</span>>
+        <span class="hljs-tag">div</span>>
+    <span class="hljs-tag">div</span>>
+
+<span class="hljs-tag">body</span>>
+<span class="hljs-tag">html</span>>
+`</pre>
+
+<p>继承性成的影响：外层标签没有选中被操作的元素</p>
+<pre>`HTML:
+    <span class="hljs-doctype"><!DOCTYPE html></span>
+    <span class="hljs-tag"><<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-title">head</span>></span>
+        <span class="hljs-tag"><<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>></span>
+        <span class="hljs-tag"><<span class="hljs-title">title</span>></span>层叠性5:继承性造成的影响<span class="hljs-tag">title</span>>
+        <span class="hljs-tag"><<span class="hljs-title">style</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span>></span><span class="css">
+        <span class="hljs-id">#hezi1</span> <span class="hljs-id">#hezi2</span> <span class="hljs-id">#hezi3</span><span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
+        <span class="hljs-rule">}</span></span>
+        <span class="hljs-tag">div</span><span class="hljs-class">.box</span> <span class="hljs-tag">div</span>.<span class="hljs-class">.box</span> <span class="hljs-tag">div</span><span class="hljs-class">.box</span><span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> blue</span></span>;
+        <span class="hljs-rule">}</span></span>
+        <span class="hljs-tag">p</span><span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> green</span></span>;
+        <span class="hljs-rule">}</span></span>
+        <span class="hljs-comment">/*
+            开始计算权重之前，一定要看是否真正选中了文字坐在的最内层标签，
+            这里没有选中p, 所以前两项都是权重为 0，最后一项标签权重为1
+            另外如果大家都是0，name就有一个就近原则，谁描述的近，就听谁的。
+        */</span>
+
+</span><span class="hljs-tag">style</span>>
+<span class="hljs-tag">head</span>>
+<span class="hljs-tag"><<span class="hljs-title">body</span>></span>
+    <span class="hljs-tag"><<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"hezi1"</span>></span>
+        <span class="hljs-tag"><<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"hezi2"</span>></span>
+            <span class="hljs-tag"><<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"hezi3"</span>></span>
+                <span class="hljs-tag"><<span class="hljs-title">p</span>></span>猜猜我是什么颜色 绿色<span class="hljs-tag">p</span>>
+            <span class="hljs-tag">div</span>>
+        <span class="hljs-tag">div</span>>
+    <span class="hljs-tag">div</span>>
+<span class="hljs-tag">body</span>>
+<span class="hljs-tag">html</span>>
+`</pre>
+
+<h2 id="层叠性：权重问题总结："><a href="#层叠性：权重问题总结：" class="headerlink" title="层叠性：权重问题总结："></a>层叠性：权重问题总结：</h2><p>层叠性是一种能力：处理冲突的能力，当不同选择器，对一个标签的同一个样式设定了不同的值，到底听谁的？这就是冲突，<br> CSS有着严格的处理冲突的机制，通过层叠性的几个例子，我们对权重问题做个总结</p>
+<pre>` <span class="hljs-number">1.</span>选择上了，纵向比较每个选择器之间的权重（<span class="hljs-property">id</span>数量，类的数量，标签的数量）
+ 如果权重一样，谁写在后边听谁的。
+ <span class="hljs-number">2.</span>没有选择上，通过继承影响的（也就是没有选中最内层文字标签），就近原则，
+ 谁描述近就听谁的，如果描述一样近，在选择权重，
+ 如果权重在一样，谁近听谁。
+`</pre>
+
+<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><p>font-family：“微软雅黑”</p>
+<p>font-family：“serif” 称线字体（边角修饰）</p>
+<p>font-family：“sans-serif” 非称线字体（没有边角修饰）</p>
+<h4 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h4><p>font-size:14px(一般默认字体大小为12-14px)</p>
+<p>font-size:100%(字体为母元素大小的100%)</p>
+<p>font-size:inherit(继承母元素大小)</p>
+<h4 id="字重"><a href="#字重" class="headerlink" title="字重"></a>字重</h4><p>font-weight:normal 到 bold对应100-900；到加粗</p>
+<p>HTML:</p>
+<pre>`<p class="font">Lo<span class="hljs-comment">rem ipsum dolor sit amet, consectetur adipisicing elit. </span>
+</p>
+`</pre>
+
+<p>CSS:</p>
+<pre>`<span class="hljs-class">.font</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> <span class="hljs-string">"微软雅黑"</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> <span class="hljs-number">500</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"><span class="hljs-number">20px</span></span></span>;    
+<span class="hljs-rule">}</span></span>
+`</pre>
+
+<h2 id="样式表总结："><a href="#样式表总结：" class="headerlink" title="样式表总结："></a>样式表总结：</h2><p><pre>`<span class="hljs-prompt">1.对于相同的选择器，样式表排序：行级&gt;</span>内嵌&gt;外部（就近原则）<br><span class="hljs-prompt">2.对于相同方式的样式表，选择器排序：ID选择器&gt;</span>类选择器&gt;标签选择器<br><span class="hljs-prompt">3.外部样式表的ID选择器&gt;</span>内嵌样式表的标签选择器。<br>总结：就近原则，<span class="hljs-constant">ID</span>选择器优先级最大</pre></p>
 </li>
 </ol>
-<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p>元字符也是用来模糊匹配的特殊字符，一共有两个：句号和竖线</p>
-<ol>
-<li>“.” 点用来匹配除换行符外的任意内容，用于匹配单行内的任意内容。</li>
-<li>“|” 与逻辑或相同，只要一个满足条件就匹配成功。<br>另外如果要匹配元字符可以使用转移字符反斜线“\”。<br>//注意，正则比较死脑筋，没有变通性，比如：在中国贩卖宾度50g以上，就可以判处死刑。这句话是正常的，但是被也会被reg4匹配上，因此一些网站上还配合人工检测。再举个例子：小黄网上找了个对象，其中黄网也被匹配<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">  <span class="comment">//元字符 有两个 . 和 |</span></span><br><span class="line">  <span class="comment">//1. . 点用来匹配除换行符外的任意内容，用于匹配单行内的任意内容。</span></span><br><span class="line">  <span class="keyword">var</span> reg = <span class="regexp">/./</span>;</span><br><span class="line">  <span class="comment">// \ 反斜杠表示转义. 可以使用转义字符匹配真正的字符 </span></span><br><span class="line">  <span class="keyword">var</span> reg2 = <span class="regexp">/\./</span>; <span class="comment">//匹配句号</span></span><br><span class="line">  <span class="keyword">var</span> reg3 = <span class="regexp">/\//</span>; <span class="comment">//匹配斜线</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">//2. | 与逻辑或相同</span></span><br><span class="line">  <span class="keyword">var</span> reg4=<span class="regexp">/违法字符|发票|海洛因|病毒|黄网|黄赌毒/</span>;<span class="comment">//用于检测违法字符</span></span><br><span class="line">  <span class="keyword">var</span> str2 = <span class="string">"大量出售第三方发票，有意者联系qq1234253234"</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//注意，正则比较死脑筋，没有变通性，比如：在中国贩卖宾度50g以上，就可以判处死刑。这句话是正常的，但是被也会被reg4匹配上，因此一些网站上还配合人工检测。再举个例子：小黄网上找了个对象，其中黄网也被匹配</span></span><br><span class="line">  <span class="comment">//3. 匹配</span></span><br><span class="line">  <span class="keyword">var</span> str = <span class="string">'www.baidu.com'</span>;</span><br><span class="line">  <span class="keyword">var</span> res = reg.test(str);</span><br><span class="line">  <span class="keyword">var</span> res2 = reg2.test(str);</span><br><span class="line">  <span class="keyword">var</span> res3 = reg3.test(str);</span><br><span class="line">  <span class="keyword">var</span> res4 = reg4.test(str2);</span><br><span class="line"></span><br><span class="line">  <span class="built_in">document</span>.write(res + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(res2 + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(res3 + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="keyword">if</span>(res4)&#123;</span><br><span class="line">   <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;开门，查水表&lt;/p&gt;"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">document</span>.write(res4 + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="原子表"><a href="#原子表" class="headerlink" title="原子表"></a>原子表</h2><p>中括号[]表示原子表，原子表只表示匹配一个内容，相当于或|，中括号内可以填写动态范围。具体有以下几中常用方式</p>
-<ol>
-<li>[张王李] 只要是括号中的任意一个就匹配成功</li>
-<li>[^张王李] 只要不是括号中的任意一个就匹配成功</li>
-<li>[0-9] 匹配0-9的数字</li>
-<li>[a-z] 匹配任意小写字母，同样范围可自定义，比如[a-c]或者[c-f]</li>
-<li>[A-Z] 匹配任意大写字母，同样范围可自定义</li>
-<li>[A-Za-z] 匹配任意大小写字母</li>
-<li>[A-Za-z0-9] 匹配任意大小写字母或者0-9数字<h3 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"> <span class="comment">//原子表只表示匹配一个内容相当于或|</span></span><br><span class="line"> <span class="comment">//1. [] 原子表，只要是括号中的任意一个就匹配成功</span></span><br><span class="line"> <span class="keyword">var</span> reg = <span class="regexp">/[张王李]三/</span>;<span class="comment">//匹配张三 王三 李三</span></span><br><span class="line"> <span class="keyword">var</span> str = <span class="string">"张三是一个人人都会说的名字"</span>;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//2. [^] 原子表，只要不是括号中的任意一个就匹配成功</span></span><br><span class="line"> <span class="keyword">var</span> reg2 = <span class="regexp">/[^张王李]三/</span>; <span class="comment">//不匹配张三 王三 李三</span></span><br><span class="line"> <span class="keyword">var</span> str2 = <span class="string">"小明是一个人人都会说的名字，一般他是一个三好学生"</span>;<span class="comment">// 个 三</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">//3. [0-9] 匹配0-9的数字</span></span><br><span class="line"> <span class="keyword">var</span> reg3 = <span class="regexp">/[0-9]/</span>;<span class="comment">//也可以是[3-6],范围自己定义</span></span><br><span class="line"> <span class="keyword">var</span> str3 = <span class="string">"我今年27了，一事无成"</span>;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//4. [a-z] 匹配任意小写字母，同样范围可自定义，比如[a-c]或者[c-f]</span></span><br><span class="line"> <span class="keyword">var</span> reg4 =<span class="regexp">/[a-z]/</span>;</span><br><span class="line"> <span class="keyword">var</span> str4 = <span class="string">"我今年很难过a"</span>;</span><br><span class="line"> </span><br><span class="line"> <span class="comment">//5. [A-Z] 匹配任意大写字母</span></span><br><span class="line"> <span class="keyword">var</span> reg5 = <span class="regexp">/[A-Z]/</span>;</span><br><span class="line"> <span class="keyword">var</span> str5 = <span class="string">"我今年很难过C"</span>;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//6. [A-Za-z] 匹配任意大小写字母</span></span><br><span class="line"> <span class="keyword">var</span> reg6 = <span class="regexp">/[A-Za-z]/</span>;</span><br><span class="line"> <span class="keyword">var</span> str6 = <span class="string">"我今年很难过a"</span>;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//7. [A-Za-z0-9] 匹配任意大小写字母或者0-9数字</span></span><br><span class="line"> <span class="keyword">var</span> reg7 = <span class="regexp">/[a-zA-Z0-9]/</span>;</span><br><span class="line"> <span class="keyword">var</span> str7 = <span class="string">"人生每天都是这么难，还是只是难这一阵a"</span>;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">var</span> res = reg.test(str);</span><br><span class="line"> <span class="keyword">var</span> res2 = reg2.test(str2);</span><br><span class="line"> <span class="keyword">var</span> res3 = reg3.test(str3);</span><br><span class="line"> <span class="keyword">var</span> res4 = reg4.test(str4);</span><br><span class="line"> <span class="keyword">var</span> res5 = reg5.test(str5);</span><br><span class="line"> <span class="keyword">var</span> res6 = reg6.test(str6);</span><br><span class="line"> <span class="keyword">var</span> res7 = reg7.test(str7);</span><br><span class="line"> <span class="built_in">document</span>.write(res + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res2 + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res3 + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res4 + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res6 + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"> <span class="built_in">document</span>.write(res7 + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h2><p>量词可以用来表示重复多个原子，量词关键词有大括号{}，星号*，问号？和加号+，主要有以下6种：</p>
-<ol>
-<li>\d{3} 表示前面的原子重复三次，和\d\d\d效果一致，其中\d可以为其他原子。</li>
-<li>\d{3,} 表示前面的原子最少有三个数字，其中\d可以为其他原子。</li>
-<li>原子{3,6} 表示前面有3-6个原子。此原子可以是\d \D \s \S \w \W任意原子，下不赘述</li>
-<li>原子* 星号表示0个或者任意个原子，原子同上。</li>
-<li>原子？ 问号表示0个或1个，原子同上。</li>
-<li>原子+ 加号表示最少一个原子。原子同上。<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3>量词,表示在其前面原子的数量，只控制与其紧挨的原子，其余不管<h3 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//花括号&#123;&#125;、星号*，问号？为量词表达式 </span></span><br><span class="line">  <span class="keyword">var</span> reg = <span class="regexp">/余额\d\d\d元/</span>;<span class="comment">//假设要匹配到123，可以使用3个\d,但是要匹配100个数字怎么办，这就用到了量词。</span></span><br><span class="line">  <span class="comment">//1. \d&#123;n&#125; 表示匹配n个数字，\d也可以是其他原子</span></span><br><span class="line">  <span class="keyword">var</span> reg2 = <span class="regexp">/余额\d&#123;3&#125;元/</span>;<span class="comment">// \d&#123;3&#125;表示\d重复三次，和\d\d\d效果一样</span></span><br><span class="line">  <span class="keyword">var</span> str= <span class="string">"您的银行卡余额123元"</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//2. \d&#123;n,&#125; 逗号表示 最少 n个数字，\d也可以是其他原子</span></span><br><span class="line">  <span class="keyword">var</span> reg3 = <span class="regexp">/\d&#123;4,&#125;/</span>; <span class="comment">//表示匹配最少4个数字</span></span><br><span class="line">  <span class="keyword">var</span> str3 = <span class="string">"happy new years 6666"</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//3. \d&#123;n,m&#125; 表示 匹配n-m个原子</span></span><br><span class="line">  <span class="keyword">var</span> reg4 = <span class="regexp">/\d&#123;5,7&#125;/</span>;<span class="comment">//匹配5-7个数字，\d也可以是其他原子</span></span><br><span class="line">  <span class="keyword">var</span> str4 = <span class="string">"let's go don't cry,even i died. 123456"</span>;</span><br><span class="line">   <span class="keyword">var</span> str44 = <span class="string">"您的银行卡余额150000元"</span>;</span><br><span class="line">   <span class="keyword">var</span> reg44 = <span class="regexp">/余额\d&#123;5,&#125;/</span>;</span><br><span class="line">   <span class="keyword">var</span> res44 = reg44.test(str44);</span><br><span class="line">   <span class="keyword">if</span>(res44 == <span class="literal">false</span>)&#123;</span><br><span class="line">    alert(<span class="string">'你连10000元都没有，还指望别人喜欢你，没钱没有人愿意嫁给你'</span>);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">//4. * 表示的数量相当于非洲人的老婆：0个或者任意个</span></span><br><span class="line">   <span class="keyword">var</span> reg5 = <span class="regexp">/\d*/</span>; <span class="comment">//表示匹配任意个数字</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">//5. ? 表示的数量相当于中国人的老婆，0个或者1个</span></span><br><span class="line">   <span class="keyword">var</span> reg6 = <span class="regexp">/\d?/</span>; <span class="comment">//表示匹配0个或者1个数字</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">//6. + 表示最少一个</span></span><br><span class="line">   <span class="keyword">var</span> reg7 = <span class="regexp">/\d+/</span>;</span><br><span class="line">   <span class="keyword">var</span> str7 = <span class="string">"程序员最少有111台电脑"</span>;<span class="comment">//匹配最少一个数字</span></span><br><span class="line">   </span><br><span class="line">  <span class="keyword">var</span> res = reg.test(str);</span><br><span class="line">  <span class="keyword">var</span> res2 = reg2.test(str);</span><br><span class="line">  <span class="keyword">var</span> res3 = reg3.test(str3);</span><br><span class="line">  <span class="keyword">var</span> res4 = reg4.test(str4);</span><br><span class="line">  <span class="keyword">var</span> res5 = reg5.test(str); <span class="comment">//无论是否有数字都行，</span></span><br><span class="line">  <span class="keyword">var</span> res6 = reg6.test(str); </span><br><span class="line">  <span class="keyword">var</span> res7 = reg7.test(str7); </span><br><span class="line">  <span class="built_in">document</span>.write(res+<span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(res2+<span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(res3+<span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(res4+<span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(res5+<span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(res6+<span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(res7+<span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"></span><br><span class="line"> &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="贪婪和吝啬"><a href="#贪婪和吝啬" class="headerlink" title="贪婪和吝啬"></a>贪婪和吝啬</h2><p>贪婪：正则在默认匹配的时候默认匹配和返回的是符合条件的最长结果，<br>吝啬：在量词后加上问号，就表示默认匹配和返回的是最短的匹配结果<br>exec：正则对象.exec方法和test相同，都是匹配方法，不过exec返回结果更多。</p>
-<h3 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h3><ol>
-<li>任何量词默认是贪婪的，找最长的匹配结果，</li>
-<li>任何量词都可以加上问号，变为吝啬<h3 id="例如：-1"><a href="#例如：-1" class="headerlink" title="例如："></a>例如：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/ld\d&#123;3,6&#125;/</span>; <span class="comment">//贪婪</span></span><br><span class="line">  <span class="keyword">var</span> reg2 = <span class="regexp">/ld\d&#123;3,6&#125;?/</span>; <span class="comment">//吝啬</span></span><br><span class="line">  <span class="keyword">var</span> str = <span class="string">"hello world12345"</span>;<span class="comment">//被上述reg匹配到了哪个？是ld123 还是ld1234 还是ld12345？？？</span></span><br><span class="line">  <span class="comment">//exec和test相同都是匹配函数，只是匹配的更加精细。</span></span><br><span class="line">  <span class="keyword">var</span> res = reg.exec(str); <span class="comment">//返回是一个数组，也就是一个对象。</span></span><br><span class="line">  <span class="keyword">var</span> res2 = reg2.exec(str); </span><br><span class="line">  <span class="built_in">console</span>.log(res);</span><br><span class="line">  <span class="built_in">document</span>.write(<span class="string">"贪婪匹配中的字符是"</span>+ res[<span class="number">0</span>] + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(<span class="string">"贪婪带匹配的源字符是"</span>+ res.input+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(<span class="string">"贪婪是从源字符的第几个开始匹配到的："</span>+ res.index + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(<span class="string">"吝啬匹配中的字符是"</span>+ res2[<span class="number">0</span>] + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(<span class="string">"吝啬带匹配的源字符是"</span>+ res2.input+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(<span class="string">"吝啬是从源字符的第几个开始匹配到的："</span>+ res2.index + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//例如爬虫，需要匹配到下边字符串中的第一对p标签，那么就需要用到吝啬了</span></span><br><span class="line">  <span class="keyword">var</span> str3 = <span class="string">"&lt;p&gt;我是第一个p标签&lt;/p&gt;&lt;p&gt;第二个标签&lt;/p&gt;"</span>;</span><br><span class="line">  <span class="keyword">var</span> reg3 = <span class="regexp">/&lt;p&gt;.*&lt;\/p&gt;/</span>;<span class="comment">//表示任意个(*)任意个（.）字符,</span></span><br><span class="line">  <span class="keyword">var</span> reg4 = <span class="regexp">/&lt;p&gt;.*?&lt;\/p&gt;/</span>;<span class="comment">//在量词*后加上？就限制为吝啬，只进行最小匹配，也就是第一对标签</span></span><br><span class="line">  <span class="keyword">var</span> res3 = reg3.exec(str3);</span><br><span class="line">  <span class="keyword">var</span> res4 = reg4.exec(str3);</span><br><span class="line">  <span class="built_in">document</span>.write(<span class="string">"贪婪匹配中的字符是"</span>+ res3[<span class="number">0</span>] + <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(<span class="string">"吝啬匹配中的字符是"</span>+ res4[<span class="number">0</span>] + <span class="string">"&lt;br&gt;"</span>);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="边界匹配"><a href="#边界匹配" class="headerlink" title="边界匹配"></a>边界匹配</h2><p>边界匹配就是限定盘匹配条件的开头和结尾，^表示匹配开头，$表示匹配结尾。具体看例子</p>
-<h3 id="例如"><a href="#例如" class="headerlink" title="例如"></a>例如</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假设要写一个匹配用户表单中的手机号验证规则</span></span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/\d&#123;11&#125;/</span>;<span class="comment">//表示11位手机号。</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"12312312333"</span>;<span class="comment">//这个输入可以用reg匹配没问题，但是当输入变为str2时，就不行了，</span></span><br><span class="line"><span class="keyword">var</span> str2 = <span class="string">"我的手机号是12312312333"</span>;</span><br><span class="line"><span class="comment">//边界匹配解决以上问题</span></span><br><span class="line"><span class="keyword">var</span> reg2 = <span class="regexp">/^\d&#123;11&#125;$/</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> res = reg.test(str);</span><br><span class="line"><span class="keyword">var</span> res2 = reg.test(str2);</span><br><span class="line"><span class="keyword">var</span> res3 = reg2.test(str2);</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.write(res+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"><span class="built_in">document</span>.write(res2+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line"><span class="built_in">document</span>.write(res3+ <span class="string">"&lt;br&gt;"</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="常用规则练习"><a href="#常用规则练习" class="headerlink" title="常用规则练习"></a>常用规则练习</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 匹配手机号</span></span><br><span class="line">  <span class="keyword">var</span> reg = <span class="regexp">/^1\d&#123;10&#125;$/</span>;<span class="comment">//表示从开始到结束只有以1开头的共11位数字</span></span><br><span class="line">  <span class="comment">//2. 匹配身份证号</span></span><br><span class="line">  <span class="keyword">var</span> reg2 = <span class="regexp">/^\d&#123;17&#125;[\dxX]$/</span>;<span class="comment">//表示从开始到结束只有18位数字或者17位数字加上x字母</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">//3. qq号</span></span><br><span class="line">  <span class="keyword">var</span> reg5 = <span class="regexp">/^[1-9]\d&#123;4,10&#125;$/</span>;<span class="comment">//第一位1-9，剩下4-10位数字</span></span><br><span class="line"> <span class="keyword">var</span> str = <span class="string">"12345"</span>;</span><br><span class="line">  <span class="keyword">var</span> str2 = <span class="string">"13365612311"</span>;</span><br><span class="line">  <span class="keyword">var</span> str3 = <span class="string">"123456789123455679"</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> res = reg.test(str);</span><br><span class="line">  <span class="keyword">var</span> res2 = reg.test(str2);</span><br><span class="line">  <span class="keyword">var</span> res3 = reg2.test(str3);</span><br><span class="line"></span><br><span class="line">  <span class="built_in">document</span>.write(res+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(res2+ <span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">  <span class="built_in">document</span>.write(res3+ <span class="string">"&lt;br&gt;"</span>);</span><br></pre></td></tr></table></figure>
 
       
 
@@ -311,7 +857,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://blog.fengfengiot.cn/正则表达式.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://blog.fengfengiot.cn/CSS笔记.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -325,20 +871,15 @@
   
 <nav id="article-nav">
   
-    <a href="/HTML5学习笔记.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Jquery学习笔记.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          HTML5学习笔记
+          Jquery学习笔记
         
       </div>
     </a>
   
-  
-    <a href="/Markdown笔记.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Markdown笔记</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
