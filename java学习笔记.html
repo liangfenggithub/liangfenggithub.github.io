@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="梁峰个人博客">
 <meta property="og:description" content="java简介java是一门应用于 分布式网络环境下 的程序设计语言 java语言特点1. 可移植性（universality）     1. 一次编译,处处运行     2. java语言运行在JVM(JAVA Virtual Machine)java虚拟机当中 2. 安全性（security）     沙箱机制和没有了指针 3. 面向对象     java中一切都是对象，编写java程序就是设计">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-20T08:55:42.571Z">
+<meta property="og:updated_time" content="2019-06-20T08:58:09.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记">
 <meta name="twitter:description" content="java简介java是一门应用于 分布式网络环境下 的程序设计语言 java语言特点1. 可移植性（universality）     1. 一次编译,处处运行     2. java语言运行在JVM(JAVA Virtual Machine)java虚拟机当中 2. 安全性（security）     沙箱机制和没有了指针 3. 面向对象     java中一切都是对象，编写java程序就是设计">
@@ -363,7 +363,7 @@ error(虚拟机产生的错误，一旦error，虚拟机就会关闭，程序执
 </code></pre></li>
 <li><p>注意：check exception是需要捕捉的异常，必须使用try. . . catch捕捉，否则编译不能通过。</p>
 </li>
-<li>try. . . catch. . . finally结构的使用方法<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">	有可能出现异常的语句</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(Exception e)&#123;<span class="comment">//e是虚拟机产生的异常对象。</span></span><br><span class="line">	一旦出现异常则执行这里的语句</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">finally</span>&#123;</span><br><span class="line">	无论是否异常都会执行，通常称为异常的出口</span><br><span class="line">	在这里通常做一些释放资源的清理工作，比如关闭数据库、文件、socket等</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>try. . . catch. . . finally结构的使用方法<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">	<span class="comment">//有可能出现异常的语句</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(Exception e)&#123;<span class="comment">//e是虚拟机产生的异常对象。</span></span><br><span class="line">	<span class="comment">//一旦出现异常则执行这里的语句</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">finally</span>&#123;</span><br><span class="line">	<span class="comment">//无论是否异常都会执行，通常称为异常的出口</span></span><br><span class="line">	<span class="comment">//在这里通常做一些释放资源的清理工作，比如关闭数据库、文件、socket等</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h3><ol>
