@@ -155,6 +155,76 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-单片机通过GPRS模块利用MQTT协议上报设备数据流程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/单片机通过GPRS模块利用MQTT协议上报设备数据流程.html">单片机通过GPRS模块利用MQTT协议上报设备数据流程</a>
+    </h1>
+  
+
+        
+        <a href="/单片机通过GPRS模块利用MQTT协议上报设备数据流程.html" class="archive-article-date">
+  	<time datetime="2019-06-25T08:52:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="硬件设备"><a href="#硬件设备" class="headerlink" title="硬件设备"></a>硬件设备</h2><ol>
+<li>STM32F407单片机</li>
+<li>安信可A9 GPRS 模块</li>
+</ol>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="1-建立连接"><a href="#1-建立连接" class="headerlink" title="1.建立连接"></a>1.建立连接</h3><p>需要按照如下流程发送：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> AT+CGATT=1          //附着网络</span><br><span class="line"> OK                 </span><br><span class="line"></span><br><span class="line"> AT+CGDCONT=1,<span class="string">"IP"</span>,<span class="string">"CMNET"</span> //设置PDP参数</span><br><span class="line"> OK</span><br><span class="line"></span><br><span class="line"> AT+CGACT=1,1 //激活PDP，正确激活以后就可以上网了</span><br><span class="line"> OK</span><br><span class="line"></span><br><span class="line">AT+MQTTCONN=<span class="string">"114.129.24.41"</span>,1883,<span class="string">"TEST"</span>,60,1,<span class="string">"LF"</span>,<span class="string">"LF"</span> //参数分别是： ip， 端口， clientid， keepalive时间，clearssion， 用户名，密码</span><br><span class="line"> OK</span><br></pre></td></tr></table></figure></p>
+<p>注意：上述AT命令第二行的”OK”是GPRS模块正确接收单片机执行回复的字符串，下同。<br>
+        
+          <a class="article-more-a" href="/单片机通过GPRS模块利用MQTT协议上报设备数据流程.html#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/单片机通过GPRS模块利用MQTT协议上报设备数据流程.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="java-java学习笔记" class="article article-type-java  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -743,76 +813,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/HTML5学习笔记.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/正则表达式.html">正则表达式</a>
-    </h1>
-  
-
-        
-        <a href="/正则表达式.html" class="archive-article-date">
-  	<time datetime="2018-11-29T12:34:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ol>
-<li>正则表达式是一个用来描述或者匹配一系列符合某个语法的字符串的语言。</li>
-<li>很多工具中，包括编辑器，正则表达式用来被检索、替换和拆分某个模式的文本内容。（对于我来说实用的功能是可以用来删除注释）</li>
-<li>许多语言都支持正则表达式 </li>
-<li>正则表达式防君子不防小人，用于表单验证只是放置别人大意输错，并不能保证数据绝对安全。</li>
-</ol>
-        
-          <a class="article-more-a" href="/正则表达式.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/正则表达式.html">展开全文 >></a>
         </p>
       
 

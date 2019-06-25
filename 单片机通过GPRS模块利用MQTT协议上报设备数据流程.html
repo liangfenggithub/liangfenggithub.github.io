@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://blog.fengfengiot.cn">
-  <title>梁峰个人博客</title>
+  <title>单片机通过GPRS模块利用MQTT协议上报设备数据流程 | 梁峰个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="梁峰个人博客">
-<meta property="og:url" content="http://blog.fengfengiot.cn/page/2/index.html">
+  <meta name="description" content="硬件设备 STM32F407单片机 安信可A9 GPRS 模块  流程1.建立连接需要按照如下流程发送：1234567891011 AT+CGATT=1          //附着网络 OK                  AT+CGDCONT=1,&quot;IP&quot;,&quot;CMNET&quot; //设置PDP参数 OK AT+CGACT=1,1 //激活PDP，正确激活以后就可以上网了 OKAT+MQTTCONN=">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单片机通过GPRS模块利用MQTT协议上报设备数据流程">
+<meta property="og:url" content="http://blog.fengfengiot.cn/单片机通过GPRS模块利用MQTT协议上报设备数据流程.html">
 <meta property="og:site_name" content="梁峰个人博客">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="硬件设备 STM32F407单片机 安信可A9 GPRS 模块  流程1.建立连接需要按照如下流程发送：1234567891011 AT+CGATT=1          //附着网络 OK                  AT+CGDCONT=1,&quot;IP&quot;,&quot;CMNET&quot; //设置PDP参数 OK AT+CGACT=1,1 //激活PDP，正确激活以后就可以上网了 OKAT+MQTTCONN=">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-25T08:53:22.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="梁峰个人博客">
-<meta name="twitter:description" content="个人博客">
+<meta name="twitter:title" content="单片机通过GPRS模块利用MQTT协议上报设备数据流程">
+<meta name="twitter:description" content="硬件设备 STM32F407单片机 安信可A9 GPRS 模块  流程1.建立连接需要按照如下流程发送：1234567891011 AT+CGATT=1          //附着网络 OK                  AT+CGDCONT=1,&quot;IP&quot;,&quot;CMNET&quot; //设置PDP参数 OK AT+CGACT=1,1 //激活PDP，正确激活以后就可以上网了 OKAT+MQTTCONN=">
   
     <link rel="alternative" href="/atom.xml" title="梁峰个人博客" type="application/atom+xml">
   
@@ -153,39 +154,80 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-正则表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-单片机通过GPRS模块利用MQTT协议上报设备数据流程" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/正则表达式.html">正则表达式</a>
+    <h1 class="article-title" itemprop="name">
+      单片机通过GPRS模块利用MQTT协议上报设备数据流程
     </h1>
   
 
         
-        <a href="/正则表达式.html" class="archive-article-date">
-  	<time datetime="2018-11-29T12:34:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-29</time>
+        <a href="/单片机通过GPRS模块利用MQTT协议上报设备数据流程.html" class="archive-article-date">
+  	<time datetime="2019-06-25T08:52:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ol>
-<li>正则表达式是一个用来描述或者匹配一系列符合某个语法的字符串的语言。</li>
-<li>很多工具中，包括编辑器，正则表达式用来被检索、替换和拆分某个模式的文本内容。（对于我来说实用的功能是可以用来删除注释）</li>
-<li>许多语言都支持正则表达式 </li>
-<li>正则表达式防君子不防小人，用于表单验证只是放置别人大意输错，并不能保证数据绝对安全。</li>
+        <h2 id="硬件设备"><a href="#硬件设备" class="headerlink" title="硬件设备"></a>硬件设备</h2><ol>
+<li>STM32F407单片机</li>
+<li>安信可A9 GPRS 模块</li>
 </ol>
-        
-          <a class="article-more-a" href="/正则表达式.html#more">more >></a>
-        
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="1-建立连接"><a href="#1-建立连接" class="headerlink" title="1.建立连接"></a>1.建立连接</h3><p>需要按照如下流程发送：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> AT+CGATT=1          //附着网络</span><br><span class="line"> OK                 </span><br><span class="line"></span><br><span class="line"> AT+CGDCONT=1,<span class="string">"IP"</span>,<span class="string">"CMNET"</span> //设置PDP参数</span><br><span class="line"> OK</span><br><span class="line"></span><br><span class="line"> AT+CGACT=1,1 //激活PDP，正确激活以后就可以上网了</span><br><span class="line"> OK</span><br><span class="line"></span><br><span class="line">AT+MQTTCONN=<span class="string">"114.129.24.41"</span>,1883,<span class="string">"TEST"</span>,60,1,<span class="string">"LF"</span>,<span class="string">"LF"</span> //参数分别是： ip， 端口， clientid， keepalive时间，clearssion， 用户名，密码</span><br><span class="line"> OK</span><br></pre></td></tr></table></figure></p>
+<p>注意：上述AT命令第二行的”OK”是GPRS模块正确接收单片机执行回复的字符串，下同。<br><a id="more"></a></p>
+<h3 id="2-订阅数据"><a href="#2-订阅数据" class="headerlink" title="2.订阅数据"></a>2.订阅数据</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AT+MQTTSUB=<span class="string">"subtopic"</span>,1,0  //主题名，订阅或取消订阅，qos</span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
+<p>订阅成功后，服务器pub的消息会被GPRS模块收到，也就是单片机的串口会收到如下格式数据</p>
+<p>+MQTTPUBLISH:消息id,topic名称，载荷长度，载荷信息<br>如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// 消息id：不断累加，</span><br><span class="line">+MQTTPUBLISH:4,subtopic2,140,&#123;</span><br><span class="line">  <span class="string">"lcdDisString"</span> : <span class="string">"wo shi ceshi de gongju  "</span>,</span><br><span class="line">  <span class="string">"relayState"</span> : <span class="string">"open"</span>,</span><br><span class="line">  <span class="string">"tempDangerVal"</span> : 56,</span><br><span class="line">  <span class="string">"ledState"</span> : <span class="string">"open"</span>,</span><br><span class="line">  <span class="string">"motorPwm"</span> : 76</span><br><span class="line">&#125;</span><br><span class="line">```		</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### 3.发布数据</span></span><br><span class="line">单片机可主动上报信息，具体如下：</span><br><span class="line">```bash</span><br><span class="line">AT+MQTTPUB=<span class="string">"pubtopic"</span>,<span class="string">"i am payload"</span>,0,0,0    //topic名称，载荷数据，qos，重发标志，是否保留？</span><br><span class="line">OK</span><br></pre></td></tr></table></figure></p>
+<p>实际通信中，Pub数据如下,</p>
+<ol>
+<li>topic 改为 IN/ECHO/1536558114123/1536558584545/1536728657044</li>
+<li>“i am payload”改为具体设备载荷数据，暂定格式如下</li>
+</ol>
+<p>与服务器通信的载荷JSON方式封包，原数据格式如下：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"deviceId"</span>: <span class="string">"F62802BFC2315E"</span>,</span><br><span class="line">    <span class="attr">"data"</span>: &#123;</span><br><span class="line">        <span class="attr">"gpsData"</span>: &#123;</span><br><span class="line">            <span class="attr">"gps"</span>: &#123;</span><br><span class="line">                <span class="attr">"GPS_Longitude"</span>: <span class="number">0</span>,</span><br><span class="line">                <span class="attr">"GPS_Latitude"</span>: <span class="number">0</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"agps"</span>: &#123;</span><br><span class="line">                <span class="attr">"AGPS_Longitude0"</span>: <span class="number">0</span>,</span><br><span class="line">                <span class="attr">"AGPS_Latitude0"</span>: <span class="number">0</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"PH"</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">"Conductivity"</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">"ORP"</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">"Turbidity"</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">"O2"</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">"voltage"</span>: &#123;</span><br><span class="line">            <span class="attr">"BatVoltage"</span>: <span class="number">3.911444</span>,</span><br><span class="line">            <span class="attr">"SolarVoltage"</span>: <span class="number">0.59391</span>,</span><br><span class="line">            <span class="attr">"SensorVoltage"</span>: <span class="number">11.42429</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>考虑到8位单片机在进行JSON解包时，内存不够（32位单片机没有问题），因此将其简化，具体为：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"deviceId"</span>: <span class="string">"F62802BFC2315E"</span>,</span><br><span class="line">    <span class="attr">"data"</span>: <span class="string">"GPS_Longitude=0.000000,GPS_Latitude=0.000000,AGPS_Longitude=0.000000,AGPS_Latitude=0.000000,PH=0.000000,Conductivity=0.000000,ORP=0.000000,Turbidity=0.000000,O2=0.000000,BatVoltage=3.911444,SolarVoltage=0.593910,SensorVoltage=11.424290"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>也就是单片机向GPRS发送下列字符串即可上报：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AT+MQTTPUB="/World",&#123;"deviceId": "F62802BFC2315E","data": "GPS_Longitude=0.000000,GPS_Latitude=0.000000,AGPS_Longitude=0.000000,AGPS_Latitude=0.000000,PH=0.000000,Conductivity=0.000000,ORP=0.000000,Turbidity=0.000000,O2=0.000000,BatVoltage=3.911444,SolarVoltage=0.593910,SensorVoltage=11.424290"&#125;,0,0,0</span><br></pre></td></tr></table></figure></p>
+<p>注意：</p>
+<ol>
+<li>在实际使用过程中，上述字符串通过sprintf函数将具体的变量值打印到字符串中，</li>
+<li>单片机在每个双引号前要加转义字符“\” ，上述为了演示没有加。</li>
+<li>java服务器在接收到单片机pub的数据后要去掉引号前面多余的转义字符符号，<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String payload = message.getPayload().toString().replace(<span class="string">'\\'</span>,<span class="string">' '</span>);</span><br><span class="line">System.out.println(payload);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="4-断开链接"><a href="#4-断开链接" class="headerlink" title="4.断开链接"></a>4.断开链接</h3><p>如果要节省电量，可在休眠时断开与服务器的连接，如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AT_MQTTDISCONN</span><br><span class="line">OK</span><br></pre></td></tr></table></figure></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wx.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -194,16 +236,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/正则表达式.html">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://blog.fengfengiot.cn/单片机通过GPRS模块利用MQTT协议上报设备数据流程.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/java学习笔记.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -223,213 +324,14 @@
 
 
 
-
-  
-    <article id="post-Markdown笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Markdown笔记.html">Markdown笔记</a>
-    </h1>
-  
-
-        
-        <a href="/Markdown笔记.html" class="archive-article-date">
-  	<time datetime="2018-11-13T02:56:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="markdown-笔记"><a href="#markdown-笔记" class="headerlink" title="markdown 笔记"></a>markdown 笔记</h1><h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h2><p>标题使用# ，井号和标题间有空格，几个井号就是几级标题，最多6级<br>
-        
-          <a class="article-more-a" href="/Markdown笔记.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Markdown笔记.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Jquery学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Jquery学习笔记.html">Jquery学习笔记</a>
-    </h1>
-  
-
-        
-        <a href="/Jquery学习笔记.html" class="archive-article-date">
-  	<time datetime="2018-11-13T02:00:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>@[toc]</p>
-<h2 id="1-什么是jQuery"><a href="#1-什么是jQuery" class="headerlink" title="1. 什么是jQuery"></a>1. 什么是jQuery</h2><blockquote>
-<p>query是查询的意思，jQuery就是用JavaScript更加方便的查询和控制页面组件。jQuery是一个伟大的JavaScript框架，压缩后只有不到100k，兼容CSS3兼容各种浏览器（IE6.0+,FF1.5+,Safari2.0+，opera9.0+）.jQuery可以使用户更加方便的额处理HTML documents、event、实现动画效果，并且提供了AJAX交互，同时又很多成熟插件可以选择。</p>
-</blockquote>
-<p>简而言之，jQuery是一个JavaScript的框架，可以简化我们对DOM的操作，达到<strong>做的的更少，实现的更多</strong>这一目的。<br>
-        
-          <a class="article-more-a" href="/Jquery学习笔记.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Jquery学习笔记.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-CSS笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/CSS笔记.html">CSS笔记</a>
-    </h1>
-  
-
-        
-        <a href="/CSS笔记.html" class="archive-article-date">
-  	<time datetime="2018-10-23T03:22:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>CSS 是控制网页样式的一种语言。</p>
-<h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><p>css语法：<br>选择器{<br>    属性： 值；<br>    属性： 值  值；<br>}<br>一边写时在冒号后写一个空格，没观。</p>
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>注释和c语言中的“/<em>  </em>/”一样，但是不能用 双斜杠“//”<br>        /<em>我是注释</em>/</p>
-        
-          <a class="article-more-a" href="/CSS笔记.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/CSS笔记.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -453,8 +355,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
