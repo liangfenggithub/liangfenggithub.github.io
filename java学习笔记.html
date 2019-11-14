@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="梁峰个人博客">
 <meta property="og:description" content="java简介java是一门应用于 分布式网络环境下 的程序设计语言 java语言特点1. 可移植性（universality）     1. 一次编译,处处运行     2. java语言运行在JVM(JAVA Virtual Machine)java虚拟机当中 2. 安全性（security）     沙箱机制和没有了指针 3. 面向对象     java中一切都是对象，编写java程序就是设计">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-20T08:58:09.934Z">
+<meta property="og:updated_time" content="2019-11-14T11:49:55.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记">
 <meta name="twitter:description" content="java简介java是一门应用于 分布式网络环境下 的程序设计语言 java语言特点1. 可移植性（universality）     1. 一次编译,处处运行     2. java语言运行在JVM(JAVA Virtual Machine)java虚拟机当中 2. 安全性（security）     沙箱机制和没有了指针 3. 面向对象     java中一切都是对象，编写java程序就是设计">
@@ -273,9 +273,7 @@ String str2 = &quot;5we4&quot;;
 <li>如果子类没有构造函数，则编译器自动创建构造无参数函数super函数调用父类的无参数构造函数<h3 id="复写"><a href="#复写" class="headerlink" title="复写"></a>复写</h3>复写也叫重写，override是在子类中重写父类的方法。另外可以通过super来执行父类的方法<h3 id="转型"><a href="#转型" class="headerlink" title="转型"></a>转型</h3>转型是面向对象多态性的体现，包括向上转型和向下转型</li>
 <li><p>向上转型<br> 生成一个子类的对象，将子类的对象赋值给父类的引用<br> 如：</p>
  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Student s = <span class="keyword">new</span> Student();</span><br><span class="line">Person p = s;  <span class="comment">//其中Student是Person的子类</span></span><br></pre></td></tr></table></figure>
-<pre><code>其中p只能调用s中的变量，
-    p如果调用方法是调用的person中的方法
-</code></pre><p> 注意：</p>
+<p> 其中p只能调用s中的变量，p如果调用方法是调用的person中的方法<br> 注意：</p>
 <pre><code>1. 一个引用能够调用哪些成员变量和成员方法，取决于这个引用的类型，也就是只可以调用本引用类型的变量和方法
 2. 当存在重写函数时（子类与父类的同名函数）一个引用调用的是哪个方法，取决于这个引用所指向的对象，也就是调用所指向的方法，具体看例子。
 </code></pre></li>
@@ -287,7 +285,7 @@ String str2 = &quot;5we4&quot;;
 </ol>
 <h3 id="抽象函数"><a href="#抽象函数" class="headerlink" title="抽象函数"></a>抽象函数</h3><p>只有函数定义，没有函数体的函数成为抽象函数。<br>定义：</p>
 <pre><code>1. 抽象类不能生成对象   抽象类本来就是用来当爹的（被子类继承）但是可以拥有构造函数（被子类调用），哈哈哈
-2. 如果一个类如果有一个及一个以上的抽象函数则必须定义该类为抽象类   
+2. 如果一个类如果有一个及一个以上的抽象函数则必须定义该类为抽象类
 3. 如果一个类中没有抽象函数，那么这个类也可以被申明为抽象类    
 4. 子类在继承抽象类时，必须复写抽象类中的抽象函数，否则编译不能通过。
 5. 抽象类使用abstract来定义
@@ -543,11 +541,12 @@ error(虚拟机产生的错误，一旦error，虚拟机就会关闭，程序执
 <li>remove(index)<br> 移除掉第index的元素</li>
 </ol>
 </li>
-<li>例子：<br> //String的arraylist<br> ArrayList<string> arraylist = new ArrayList<string>();<br> arraylist. add(“hello”);<br> arraylist. add(“i”);<br> arraylist. add(“am”);<br> arraylist. add(“ArrayList”);<br> arraylist. add(“lllll”);<br> arraylist. remove(4);<br> for(int i = 0 ; i&lt;arraylist. size(); i++){<pre><code>System. out. println(arraylist. get(i));
-</code></pre> }</string></string></li>
+<li>例子： <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//String的arraylist</span></span><br><span class="line">ArrayList&lt;String&gt; arraylist = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">arraylist. add(<span class="string">"hello"</span>);</span><br><span class="line">arraylist. add(<span class="string">"i"</span>);</span><br><span class="line">arraylist. add(<span class="string">"am"</span>);</span><br><span class="line">arraylist. add(<span class="string">"ArrayList"</span>);</span><br><span class="line">arraylist. add(<span class="string">"lllll"</span>);</span><br><span class="line">arraylist. remove(<span class="number">4</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i&lt;arraylist. size(); i++)&#123;</span><br><span class="line">	System. out. println(arraylist. get(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 </li>
-<li>Collection接口<ol>
+<li><p>Collection接口</p>
+<ol>
 <li>collection接口是集合的顶级接口，掌握了此接口的基本用法，底层的实现类就差不多了</li>
 <li>常用方法<ol>
 <li>boolean add(Object o)<br> 像集合当中加入一个对象</li>
@@ -647,7 +646,7 @@ error(虚拟机产生的错误，一旦error，虚拟机就会关闭，程序执
 <li>此函数多用在集中，比如hashMap的get方法就是通过计算对象的hashCode方法得到一个值来判断次对象是否存在于map中</li>
 </ol>
 </li>
-<li>复写hashcode例子 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span></span>&#123;</span><br><span class="line">	result result = <span class="number">17</span>;</span><br><span class="line">	result = <span class="number">31</span> * result + 成员变量；<span class="comment">//此成员变量是int型的</span></span><br><span class="line">	result = <span class="number">31</span> * result + 成员变量. hashCode();<span class="comment">//此成员变量是String类型 </span></span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>复写hashcode例子 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span></span>&#123;</span><br><span class="line">	result result = <span class="number">17</span>;</span><br><span class="line">	result = <span class="number">31</span> * result + 成员变量；<span class="comment">//此成员   变量是int型的</span></span><br><span class="line">	result = <span class="number">31</span> * result + 成员变量. hashCode();<span class="comment">//此成员变量是String类型 </span></span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
