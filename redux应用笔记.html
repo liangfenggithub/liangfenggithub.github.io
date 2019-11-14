@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://blog.fengfengiot.cn">
-  <title>Archives: 2019 | 梁峰个人博客</title>
+  <title>梁峰个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人博客">
-<meta property="og:type" content="website">
+  <meta name="description" content="项目中应用到了redux，根据前人的代码和网上百度到的资料总结如下，以免遗忘。 简介redux是一个状态管理工具，随着前端功能的增加，业务的复杂，将数据提取出组件是更好的方式，rudex是其中一种解决方案。 redux基本概念redux由store、action、reducer 三部分组成。 storestore:仓库，是一个包括项目所有的状态数据的对象，redux提供了createStore函数">
+<meta property="og:type" content="article">
 <meta property="og:title" content="梁峰个人博客">
-<meta property="og:url" content="http://blog.fengfengiot.cn/archives/2019/index.html">
+<meta property="og:url" content="http://blog.fengfengiot.cn/redux应用笔记.html">
 <meta property="og:site_name" content="梁峰个人博客">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="项目中应用到了redux，根据前人的代码和网上百度到的资料总结如下，以免遗忘。 简介redux是一个状态管理工具，随着前端功能的增加，业务的复杂，将数据提取出组件是更好的方式，rudex是其中一种解决方案。 redux基本概念redux由store、action、reducer 三部分组成。 storestore:仓库，是一个包括项目所有的状态数据的对象，redux提供了createStore函数">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-14T10:46:22.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="梁峰个人博客">
-<meta name="twitter:description" content="个人博客">
+<meta name="twitter:description" content="项目中应用到了redux，根据前人的代码和网上百度到的资料总结如下，以免遗忘。 简介redux是一个状态管理工具，随着前端功能的增加，业务的复杂，将数据提取出组件是更好的方式，rudex是其中一种解决方案。 redux基本概念redux由store、action、reducer 三部分组成。 storestore:仓库，是一个包括项目所有的状态数据的对象，redux提供了createStore函数">
   
     <link rel="alternative" href="/atom.xml" title="梁峰个人博客" type="application/atom+xml">
   
@@ -153,286 +154,172 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-redux应用笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>项目中应用到了redux，根据前人的代码和网上百度到的资料总结如下，以免遗忘。</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>redux是一个状态管理工具，随着前端功能的增加，业务的复杂，将数据提取出组件是更好的方式，rudex是其中一种解决方案。</p>
+<h2 id="redux基本概念"><a href="#redux基本概念" class="headerlink" title="redux基本概念"></a>redux基本概念</h2><p>redux由store、action、reducer 三部分组成。</p>
+<h3 id="store"><a href="#store" class="headerlink" title="store"></a>store</h3><p>store:仓库，是一个包括项目所有的状态数据的对象，redux提供了createStore函数来创建一个store<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> store = createStore(reducer); <span class="comment">//参数reducer下面介绍</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="action"><a href="#action" class="headerlink" title="action"></a>action</h3><p>action:动作，是一种包括类型和数据的对象，是reducer函数的参数，为reducer提供参数来进行不同的处理，典型形式是：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  type:<span class="string">"ADD_CART_NUM"</span>,</span><br><span class="line">  data: data</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="reducer"><a href="#reducer" class="headerlink" title="reducer"></a>reducer</h3><p>reducer：处理函数（我的翻译），是一个具体的业务处理函数，位于action和disptch之间，被dispatch调用，根据传入action对象数据进行处理并返回一个新的state。典型形式是：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过判断Action的类型，返回新的数据改变后的state对象，即使没有任何状态的改变，也要返回一个对象</span></span><br><span class="line"><span class="comment">// 注意：返回的state就是reducer提供的，也就是组件同步到的state</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">counter</span>(<span class="params">state = initState, action</span>) </span>&#123; <span class="comment">//state是reducer提供的默认值</span></span><br><span class="line">  <span class="keyword">const</span> count = state.count</span><br><span class="line">  <span class="keyword">switch</span> (action.type) &#123;</span><br><span class="line">    <span class="keyword">case</span> ADD_CART_NUM:</span><br><span class="line">      <span class="keyword">return</span> &#123; <span class="attr">count</span>: count + action.data.plusCount&#125; <span class="comment">//action.data是组件传入的的值</span></span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">return</span> state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="dispatch"><a href="#dispatch" class="headerlink" title="dispatch"></a>dispatch</h3><p>dispath: 分发函数（我的翻译），是store内部的函数,传入action并调用reducer，一般形式为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick=&#123;()=&gt;store.dispatch(myAction.increaseCartNum())&#125;&gt;Increase&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/其中increaseCartNum返回一个action对象，在dispath内部进行对应reducer的调用</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="subscribe"><a href="#subscribe" class="headerlink" title="subscribe"></a>subscribe</h3><p>subscribe: 注册监听函数(我的翻译)，也是store内部的函数，用于组件同步store中数据，一般形式为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">componentWillMount()&#123;</span><br><span class="line">  <span class="comment">// 订阅状态变化</span></span><br><span class="line">  store.subscribe(<span class="function">(<span class="params">state</span>)=&gt;</span><span class="keyword">this</span>.setState(state)) <span class="comment">//注册到监听器函数到store中</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>问题</strong> store中是如何区分不同组件的state呢？</p>
+<h2 id="redux流转流程"><a href="#redux流转流程" class="headerlink" title="redux流转流程"></a>redux流转流程</h2><p>假设store中数据位于上层，组件位于下层，那么有数据上行和数据下行两种流转。</p>
+<h3 id="数据下行"><a href="#数据下行" class="headerlink" title="数据下行"></a>数据下行</h3><p>store通过props传递到具体组件，组件通过this.props.xxx拿到数据。</p>
+<h3 id="数据上行"><a href="#数据上行" class="headerlink" title="数据上行"></a>数据上行</h3><p>组件中点击按钮等操作调用store的dispatch函数（对应的action作为函数参数），dispatch函数内部调用相应的recuder函数，改变并返回store数据</p>
+<h2 id="react-redux"><a href="#react-redux" class="headerlink" title="react-redux"></a>react-redux</h2><p>在react应用中，利用react-redux来对两者进行桥接使用。<br>react提供了一个函数和一个组件，简化redux流程<br>connect函数：实现同步store数据到组件的props中、暴露action函数隐藏对dispatch调用reducer。一般形式为<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 绑定store中的状态到组件的props</span></span><br><span class="line"><span class="keyword">const</span> mapStateToProps = <span class="function"><span class="params">state</span> =&gt;</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		state</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//暴露action到组件props</span></span><br><span class="line"><span class="keyword">const</span> mapDispatchToProps = <span class="function"><span class="params">dispath</span> =&gt;</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> bindActionCreators(&#123;</span><br><span class="line">		changeCartNum</span><br><span class="line">	&#125;, dispath)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(mapStateToProps, mapDispatchToProps)(MiniCart) <span class="comment">//其中MiniCart是组件</span></span><br></pre></td></tr></table></figure></p>
+<p>Provider标签用于将store传递到每个组件中，一般形式为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Provider store=&#123;store&#125; &gt;</span><br><span class="line">      &lt;Router&gt;</span><br><span class="line">          &lt;LocaleProvider locale=&#123;zh_CN&#125;&gt;&lt;App /&gt;&lt;/LocaleProvider&gt;</span><br><span class="line">      &lt;<span class="regexp">/Router&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>Provider &gt;</span><br><span class="line">  , <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>));</span><br></pre></td></tr></table></figure></p>
+<p>整体代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//action.js aciton文件</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">changeCartNum</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        type: <span class="string">'CART_NUM'</span>,</span><br><span class="line">        data</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//frontReducer.js  子reducer文件，不同模块分为不同reducer文件</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> init = &#123; <span class="comment">//reducer的初始状态</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> Front = <span class="function">(<span class="params">state = init, action = &#123;&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">switch</span> (action.type) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'CART_NUM'</span>:</span><br><span class="line">      <span class="comment">//这里可以添加一些处理函数，</span></span><br><span class="line">      <span class="keyword">return</span> &#123; ...state, ...action.data &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Front</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//reducers.js 总reducers文件</span></span><br><span class="line"><span class="keyword">import</span> &#123; combineReducers &#125; <span class="keyword">from</span> <span class="string">'redux'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Front <span class="keyword">from</span> <span class="string">'./FrontReducer'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> reducer = combineReducers(&#123; <span class="comment">//合并reducer文件</span></span><br><span class="line">    Front,</span><br><span class="line">    xxx,<span class="comment">//不同的reducer文件</span></span><br><span class="line">    xxx,<span class="comment">//不同的reducer文件</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> reducer</span><br><span class="line"></span><br><span class="line"><span class="comment">//index.js文件</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = createStore(reducer);</span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Provider store=&#123;store&#125; &gt; <span class="comment">//传递store到内部组件中</span></span><br><span class="line">      &lt;Router&gt;</span><br><span class="line">          &lt;LocaleProvider locale=&#123;zh_CN&#125;&gt;&lt;App /&gt;&lt;/LocaleProvider&gt;</span><br><span class="line">      &lt;<span class="regexp">/Router&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>Provider &gt;</span><br><span class="line">  , <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//B组件获取cartNumber</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; changeCartNum &#125; <span class="keyword">from</span> <span class="string">'@actions'</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PublicTop</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render()&#123;</span><br><span class="line">    ....</span><br><span class="line">    &lt;span &gt;</span><br><span class="line">      购物车数量</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="keyword">this</span>.props.state.Front.cartNum </span><br><span class="line">      &#125;</span><br><span class="line">    &lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">    .....</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const mapStateToProps = state =&gt; &#123;</span></span><br><span class="line"><span class="regexp">	return &#123;</span></span><br><span class="line"><span class="regexp">		state</span></span><br><span class="line"><span class="regexp">	&#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const mapDispatchToProps = dispath =&gt; &#123;</span></span><br><span class="line"><span class="regexp">	return bindActionCreators(&#123;</span></span><br><span class="line"><span class="regexp">		changeCartNum</span></span><br><span class="line"><span class="regexp">	&#125;, dispath)</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default connect(mapStateToProps, mapDispatchToProps)(MiniCart)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/A组件设置cartNumber</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">import &#123; changeCartNum &#125; from '@actions'; /</span><span class="regexp">/ 购物车数量</span></span><br><span class="line"><span class="regexp">class Cart extends Component &#123;</span></span><br><span class="line"><span class="regexp">  render()&#123;</span></span><br><span class="line"><span class="regexp">    .......</span></span><br><span class="line"><span class="regexp">      /</span><span class="regexp">/增加购物车数量按钮的点击处理函数</span></span><br><span class="line"><span class="regexp">      this.props.changeCartNum(&#123; cartNum: totals &#125;)/</span><span class="regexp">/totals是设置的值</span></span><br><span class="line"><span class="regexp">    .......</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const mapStateToProps = state =&gt; &#123;</span></span><br><span class="line"><span class="regexp">	return &#123;</span></span><br><span class="line"><span class="regexp">		state</span></span><br><span class="line"><span class="regexp">	&#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">const mapDispatchToProps = dispath =&gt; &#123;</span></span><br><span class="line"><span class="regexp">	return bindActionCreators(&#123;</span></span><br><span class="line"><span class="regexp">		changeCartNum</span></span><br><span class="line"><span class="regexp">	&#125;, dispath)</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default connect(mapStateToProps, mapDispatchToProps)(Cart)</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="redux原生操作"><a href="#redux原生操作" class="headerlink" title="redux原生操作"></a>redux原生操作</h2><p>以下程序是没有使用react-redux的原生操作，包括store的简易实现，用于理解redux的实现。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//reducer文件 counterReducer.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 提供一个初始的状态</span></span><br><span class="line">initState=&#123;</span><br><span class="line"> count: <span class="number">0</span> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过判断Action的类型，返回新的数据改变后的state对象，即使没有任何状态的改变，也要返回一个对象</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">counter</span>(<span class="params">state = initState, action</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> count = state.count</span><br><span class="line">  <span class="keyword">switch</span> (action.type) &#123;</span><br><span class="line">    <span class="keyword">case</span> INCREMENT:</span><br><span class="line">      <span class="keyword">return</span> &#123; <span class="attr">count</span>: count + <span class="number">1</span> &#125;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">return</span> state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//主文件 index.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个store全局管理state和操作</span></span><br><span class="line"><span class="keyword">const</span> store = createStore(reducer); </span><br><span class="line"></span><br><span class="line"><span class="comment">// Provider在根组件&lt;App&gt;外面包了一层，App的所有子组件就默认都可以拿到store，通过组件的props传递</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Root</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            &lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">                &lt;App/&gt;</span><br><span class="line">            &lt;<span class="regexp">/Provider&gt;</span></span><br><span class="line"><span class="regexp">        )</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ createStore的简单实现</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">function createStore = ( reducer ) =&gt; &#123;</span></span><br><span class="line"><span class="regexp">  let currentState; /</span><span class="regexp">/ 内部的状态</span></span><br><span class="line"><span class="regexp">  let listeners = []; /</span><span class="regexp">/所有的监听者</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">  const getState = () =&gt; currentState;  /</span><span class="regexp">/ 获取store中的state</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">  /</span><span class="regexp">/ dispatch的操作就是内部执行reducer()函数，action和reducer在这儿产生交集，并且通知所有的监听者</span></span><br><span class="line"><span class="regexp">  const dispatch = ( action ) =&gt; &#123;</span></span><br><span class="line"><span class="regexp">    currentState = reducer(state, action); /</span><span class="regexp">/ 更新state</span></span><br><span class="line"><span class="regexp">    listeners.forEach(listener =&gt; listener());</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">  /</span><span class="regexp">/ 订阅事件</span></span><br><span class="line"><span class="regexp">  const subscribe = ( listener ) =&gt; &#123;</span></span><br><span class="line"><span class="regexp">    listeners.push(listener);</span></span><br><span class="line"><span class="regexp">    return ()=&gt;&#123;</span></span><br><span class="line"><span class="regexp">      listeners = listeners.filter(l =&gt; l !== listener)</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  return &#123;</span></span><br><span class="line"><span class="regexp">    getState,</span></span><br><span class="line"><span class="regexp">    dispatch,</span></span><br><span class="line"><span class="regexp">    subscribe</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/组件文件</span></span><br><span class="line"><span class="regexp">class Counter extends Component&#123;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  componentWillMount()&#123;</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/ 订阅状态变化</span></span><br><span class="line"><span class="regexp">    store.subscribe((state)=&gt;this.setState(state)) /</span><span class="regexp">/注册到监听器函数到store中</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  render() &#123;</span></span><br><span class="line"><span class="regexp">    return (</span></span><br><span class="line"><span class="regexp">      &lt;div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;span&gt;&#123;value&#125;&lt;/</span>span&gt;</span><br><span class="line">        <span class="comment">//点击后dispatch事件类型</span></span><br><span class="line">        &lt;button onClick=&#123;()=&gt;store.dispatch(increaseAction.increase())&#125;&gt;Increase&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wx.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/hexo常用的几个命令.html" class="archive-article-date">
-  	<time datetime="2019-11-14T10:46:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/hexo常用的几个命令.html">hexo常用的几个命令</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://blog.fengfengiot.cn/redux应用笔记.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/redux应用笔记.html" class="archive-article-date">
-  	<time datetime="2019-11-14T10:36:16.987Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/单片机通过GPRS模块利用MQTT协议上报设备数据流程.html" class="archive-article-date">
-  	<time datetime="2019-06-25T08:52:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-25</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/单片机通过GPRS模块利用MQTT协议上报设备数据流程.html">单片机通过GPRS模块利用MQTT协议上报设备数据流程</a>
-    </h1>
+    <a href="/hexo常用的几个命令.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          hexo常用的几个命令
+        
+      </div>
+    </a>
   
+  
+    <a href="/单片机通过GPRS模块利用MQTT协议上报设备数据流程.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">单片机通过GPRS模块利用MQTT协议上报设备数据流程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-java">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/java学习笔记.html" class="archive-article-date">
-  	<time datetime="2019-06-19T07:19:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-19</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/java学习笔记.html">笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/树莓派使用配置记录.html" class="archive-article-date">
-  	<time datetime="2019-06-13T03:39:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/树莓派使用配置记录.html">树莓派使用配置记录</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/内网穿透-FRP配置记录.html" class="archive-article-date">
-  	<time datetime="2019-05-31T02:49:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/内网穿透-FRP配置记录.html">内网穿透-FRP配置记录</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/低功耗物联网设备寿命计算方法.html" class="archive-article-date">
-  	<time datetime="2019-05-06T02:54:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/低功耗物联网设备寿命计算方法.html">低功耗物联网设备寿命计算方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/单片机控制调试信息输出的方法.html" class="archive-article-date">
-  	<time datetime="2019-03-23T03:04:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/单片机控制调试信息输出的方法.html">单片机控制调试信息输出的方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/PHY芯片lan8720调试笔记.html" class="archive-article-date">
-  	<time datetime="2019-02-13T03:06:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/PHY芯片lan8720调试笔记.html">PHY芯片lan8720调试笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-zigbe">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/ZigBee中OSAL任务、事件和消息之间关系.html" class="archive-article-date">
-  	<time datetime="2019-01-03T03:07:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/ZigBee中OSAL任务、事件和消息之间关系.html">OSAL任务、事件和消息之间关系</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -456,8 +343,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
